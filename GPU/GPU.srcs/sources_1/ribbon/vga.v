@@ -22,25 +22,24 @@
 
 module vga
 (
-    input                   I_clk   , // ÏµÍ³100MHzÊ±ÖÓ
-    input                   I_rst_n , // ÏµÍ³¸´Î»
-    output                  O_hs    , // VGAĞĞÍ¬²½ĞÅºÅ
-    output                  O_vs    , // VGA³¡Í¬²½ĞÅºÅ
-    output reg[11:0]        R_h_cnt , // ĞĞÊ±Ğò¼ÆÊıÆ÷
-    output reg[11:0]        R_v_cnt , // ³¡Ê±Ğò¼ÆÊıÆ÷
+    input                   I_clk   , // ç³»ç»Ÿ100MHzæ—¶é’Ÿ
+    input                   I_rst_n , // ç³»ç»Ÿå¤ä½
+    output                  O_hs    , // VGAè¡ŒåŒæ­¥ä¿¡å·
+    output                  O_vs    , // VGAåœºåŒæ­¥ä¿¡å·
+    output reg[11:0]        R_h_cnt , // è¡Œæ—¶åºè®¡æ•°å™¨
+    output reg[11:0]        R_v_cnt , // åœºæ—¶åºè®¡æ•°å™¨
     output                  active  
 );
 //wire clk_25m,locked;
-
-
-// ·Ö±æÂÊÎª640*480Ê±ĞĞÊ±Ğò¸÷¸ö²ÎÊı¶¨Òå
+    
+// åˆ†è¾¨ç‡ä¸º640*480æ—¶è¡Œæ—¶åºå„ä¸ªå‚æ•°å®šä¹‰
 parameter       C_H_SYNC_PULSE      =   96  , 
                 C_H_BACK_PORCH      =   48  ,
                 C_H_ACTIVE_TIME     =   640 ,
                 C_H_FRONT_PORCH     =   16  ,
                 C_H_LINE_PERIOD     =   800 ;
 
-// ·Ö±æÂÊÎª640*480Ê±³¡Ê±Ğò¸÷¸ö²ÎÊı¶¨Òå               
+// åˆ†è¾¨ç‡ä¸º640*480æ—¶åœºæ—¶åºå„ä¸ªå‚æ•°å®šä¹‰               
 parameter       C_V_SYNC_PULSE      =   2   , 
                 C_V_BACK_PORCH      =   33  ,
                 C_V_ACTIVE_TIME     =   480 ,
@@ -50,12 +49,12 @@ parameter       C_V_SYNC_PULSE      =   2   ,
 parameter       C_COLOR_BAR_WIDTH   =   C_H_ACTIVE_TIME / 8  ;  
 reg             R_clk_25M       ;
 reg             R_clk_50M       ;
-wire            W_active_flag   ; // ¼¤»î±êÖ¾£¬µ±Õâ¸öĞÅºÅÎª1Ê±RGBµÄÊı¾İ¿ÉÒÔÏÔÊ¾ÔÚÆÁÄ»ÉÏ
+wire            W_active_flag   ; // æ¿€æ´»æ ‡å¿—ï¼Œå½“è¿™ä¸ªä¿¡å·ä¸º1æ—¶RGBçš„æ•°æ®å¯ä»¥æ˜¾ç¤ºåœ¨å±å¹•ä¸Š
 assign active = W_active_flag;
 //////////////////////////////////////////////////////////////////
-//¹¦ÄÜ£º ²úÉú25MHzµÄÏñËØÊ±ÖÓ
+//åŠŸèƒ½ï¼š äº§ç”Ÿ25MHzçš„åƒç´ æ—¶é’Ÿ
 //////////////////////////////////////////////////////////////////
-//Ò²¿ÉÊ¹ÓÃclocking wizard
+//ä¹Ÿå¯ä½¿ç”¨clocking wizard
 //clk_wiz_0 instance_name
 //   (
 //    // Clock out ports
@@ -82,7 +81,7 @@ begin
 end
 
 //////////////////////////////////////////////////////////////////
-// ¹¦ÄÜ£º²úÉúĞĞÊ±Ğò
+// åŠŸèƒ½ï¼šäº§ç”Ÿè¡Œæ—¶åº
 //////////////////////////////////////////////////////////////////
 always @(posedge R_clk_25M or negedge I_rst_n)
 begin
@@ -98,7 +97,7 @@ assign O_hs =   (R_h_cnt < C_H_SYNC_PULSE) ? 1'b0 : 1'b1    ;
 //////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////
-// ¹¦ÄÜ£º²úÉú³¡Ê±Ğò
+// åŠŸèƒ½ï¼šäº§ç”Ÿåœºæ—¶åº
 //////////////////////////////////////////////////////////////////
 always @(posedge R_clk_25M or negedge I_rst_n)
 begin
@@ -121,7 +120,7 @@ assign W_active_flag =  (R_h_cnt >= (C_H_SYNC_PULSE + C_H_BACK_PORCH            
                         (R_v_cnt <= (C_V_SYNC_PULSE + C_V_BACK_PORCH + C_V_ACTIVE_TIME))  ;                     
 /*
 ////////////////////////////////////////////////////////////////
-// ¹¦ÄÜ£º²úÉúºÚ°×Ïà¼äµÄ¸ñ×ÓÍ¼°¸
+// åŠŸèƒ½ï¼šäº§ç”Ÿé»‘ç™½ç›¸é—´çš„æ ¼å­å›¾æ¡ˆ
 ////////////////////////////////////////////////////////////////
 always @(posedge R_clk_25M or negedge I_rst_n)
 begin
