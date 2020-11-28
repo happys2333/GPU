@@ -22,27 +22,27 @@
 
 module ribbon(
     input clk,
-    input rst, //ÏµÍ³¸´Î»
+    input rst, //ç³»ç»Ÿå¤ä½
     output reg[3:0] red,
     output reg[3:0] green,
     output reg[3:0] blue,
-    output hs, // VGAĞĞÍ¬²½ĞÅºÅ
-    output vs,  // VGA³¡Í¬²½ĞÅºÅ
+    output hs, // VGAè¡ŒåŒæ­¥ä¿¡å·
+    output vs, // VGAåœºåŒæ­¥ä¿¡å·
     output active
     );
     wire [11:0] h_cnt;
     wire [11:0] v_cnt;
     vga vg(clk,rst,hs,vs,h_cnt,v_cnt,active);
     
-    //²ÎÊı
-    // ·Ö±æÂÊÎª640*480Ê±ĞĞÊ±Ğò¸÷¸ö²ÎÊı¶¨Òå
+    //å‚æ•°
+    // åˆ†è¾¨ç‡ä¸º640*480æ—¶è¡Œæ—¶åºå„ä¸ªå‚æ•°å®šä¹‰
 parameter       C_H_SYNC_PULSE     =   96  , 
                 C_H_BACK_PORCH      =   48  ,
                 C_H_ACTIVE_TIME     =   640 ,
                 C_H_FRONT_PORCH     =   16  ,
                 C_H_LINE_PERIOD     =   800 ;
 
-// ·Ö±æÂÊÎª640*480Ê±³¡Ê±Ğò¸÷¸ö²ÎÊı¶¨Òå               
+// åˆ†è¾¨ç‡ä¸º640*480æ—¶åœºæ—¶åºå„ä¸ªå‚æ•°å®šä¹‰               
 parameter       C_V_SYNC_PULSE      =   2   , 
                 C_V_BACK_PORCH      =   33  ,
                 C_V_ACTIVE_TIME     =   480 ,
@@ -51,7 +51,7 @@ parameter       C_V_SYNC_PULSE      =   2   ,
                 
 parameter       C_COLOR_BAR_WIDTH   =   C_H_ACTIVE_TIME / 8  ;
 
-    //¹¦ÄÜÄ£¿é
+    //åŠŸèƒ½æ¨¡å—
     always @(posedge clk or negedge rst)
 begin
     if(!rst) 
@@ -62,53 +62,53 @@ begin
         end
     else if(active)     
         begin
-            if(h_cnt < (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_COLOR_BAR_WIDTH)) // ºìÉ«²ÊÌõ
+            if(h_cnt < (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_COLOR_BAR_WIDTH)) // çº¢è‰²å½©æ¡
                 begin
-                    red   <=  4'b1111    ; // ºìÉ«²ÊÌõ°ÑºìÉ«·ÖÁ¿È«²¿¸ø1£¬ÂÌÉ«ºÍÀ¶É«¸ø0
+                    red   <=  4'b1111    ; // çº¢è‰²å½©æ¡æŠŠçº¢è‰²åˆ†é‡å…¨éƒ¨ç»™1ï¼Œç»¿è‰²å’Œè“è‰²ç»™0
                     green <=  4'b0000   ;
                     blue  <=  4'b0000    ;
                 end
-            else if(h_cnt < (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_COLOR_BAR_WIDTH*2)) // ÂÌÉ«²ÊÌõ
+            else if(h_cnt < (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_COLOR_BAR_WIDTH*2)) // ç»¿è‰²å½©æ¡
                 begin
                     red   <=  4'b0000    ;
-                    green <=  4'b1111   ; // ÂÌÉ«²ÊÌõ°ÑÂÌÉ«·ÖÁ¿È«²¿¸ø1£¬ºìÉ«ºÍÀ¶É«·ÖÁ¿¸ø0
+                    green <=  4'b1111   ; // ç»¿è‰²å½©æ¡æŠŠç»¿è‰²åˆ†é‡å…¨éƒ¨ç»™1ï¼Œçº¢è‰²å’Œè“è‰²åˆ†é‡ç»™0
                     blue  <=  4'b0000    ;
                 end 
-            else if(h_cnt < (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_COLOR_BAR_WIDTH*3)) // À¶É«²ÊÌõ
+            else if(h_cnt < (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_COLOR_BAR_WIDTH*3)) // è“è‰²å½©æ¡
                 begin
                     red   <=  4'b0000    ;
                     green <=  4'b0000   ;
-                    blue  <=  4'b1111    ; // À¶É«²ÊÌõ°ÑÀ¶É«·ÖÁ¿È«²¿¸ø1£¬ºìÉ«ºÍÂÌ·ÖÁ¿¸ø0
+                    blue  <=  4'b1111    ; // è“è‰²å½©æ¡æŠŠè“è‰²åˆ†é‡å…¨éƒ¨ç»™1ï¼Œçº¢è‰²å’Œç»¿åˆ†é‡ç»™0
                 end 
-            else if(h_cnt < (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_COLOR_BAR_WIDTH*4)) // °×É«²ÊÌõ
+            else if(h_cnt < (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_COLOR_BAR_WIDTH*4)) // ç™½è‰²å½©æ¡
                 begin
-                    red   <=  4'b1111    ; // °×É«²ÊÌõÊÇÓĞºìÂÌÀ¶Èı»ùÉ«»ìºÏ¶ø³É
-                    green <=  4'b1111   ; // ËùÒÔ°×É«²ÊÌõÒª°ÑºìÂÌÀ¶Èı¸ö·ÖÁ¿È«²¿¸ø1
+                    red   <=  4'b1111    ; // ç™½è‰²å½©æ¡æ˜¯æœ‰çº¢ç»¿è“ä¸‰åŸºè‰²æ··åˆè€Œæˆ
+                    green <=  4'b1111   ; // æ‰€ä»¥ç™½è‰²å½©æ¡è¦æŠŠçº¢ç»¿è“ä¸‰ä¸ªåˆ†é‡å…¨éƒ¨ç»™1
                     blue  <=  4'b1111    ;
                 end 
-            else if(h_cnt < (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_COLOR_BAR_WIDTH*5)) // ºÚÉ«²ÊÌõ
+            else if(h_cnt < (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_COLOR_BAR_WIDTH*5)) // é»‘è‰²å½©æ¡
                 begin
-                    red   <=  4'b0000    ; // ºÚÉ«²ÊÌõ¾ÍÊÇ°ÑºìÂÌÀ¶ËùÓĞ·ÖÁ¿È«²¿¸ø0
+                    red   <=  4'b0000    ; // é»‘è‰²å½©æ¡å°±æ˜¯æŠŠçº¢ç»¿è“æ‰€æœ‰åˆ†é‡å…¨éƒ¨ç»™0
                     green <=  4'b0000   ;
                     blue  <=  4'b0000   ;
                 end 
-            else if(h_cnt < (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_COLOR_BAR_WIDTH*6)) // »ÆÉ«²ÊÌõ
+            else if(h_cnt < (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_COLOR_BAR_WIDTH*6)) // é»„è‰²å½©æ¡
                 begin
-                    red   <=  4'b1111    ; // »ÆÉ«²ÊÌõÊÇÓĞºìÂÌÁ½ÖÖÑÕÉ«»ìºÏ¶ø³É
-                    green <=  4'b1111   ; // ËùÒÔ»ÆÉ«²ÊÌõÒª°ÑºìÂÌÁ½¸ö·ÖÁ¿¸ø1
-                    blue  <=  4'b0000    ; // À¶É«·ÖÁ¿¸ø0
+                    red   <=  4'b1111    ; // é»„è‰²å½©æ¡æ˜¯æœ‰çº¢ç»¿ä¸¤ç§é¢œè‰²æ··åˆè€Œæˆ
+                    green <=  4'b1111   ; // æ‰€ä»¥é»„è‰²å½©æ¡è¦æŠŠçº¢ç»¿ä¸¤ä¸ªåˆ†é‡ç»™1
+                    blue  <=  4'b0000    ; // è“è‰²åˆ†é‡ç»™0
                 end 
-            else if(h_cnt < (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_COLOR_BAR_WIDTH*7)) // ×ÏÉ«²ÊÌõ
+            else if(h_cnt < (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_COLOR_BAR_WIDTH*7)) // ç´«è‰²å½©æ¡
                 begin
-                    red   <=  4'b1111    ; // ×ÏÉ«²ÊÌõÊÇÓĞºìÀ¶Á½ÖÖÑÕÉ«»ìºÏ¶ø³É
-                    green <=  4'b0000   ; // ËùÒÔ×ÏÉ«²ÊÌõÒª°ÑºìÀ¶Á½¸ö·ÖÁ¿¸ø1
-                    blue  <=  4'b1111    ; // ÂÌÉ«·ÖÁ¿¸ø0
+                    red   <=  4'b1111    ; // ç´«è‰²å½©æ¡æ˜¯æœ‰çº¢è“ä¸¤ç§é¢œè‰²æ··åˆè€Œæˆ
+                    green <=  4'b0000   ; // æ‰€ä»¥ç´«è‰²å½©æ¡è¦æŠŠçº¢è“ä¸¤ä¸ªåˆ†é‡ç»™1
+                    blue  <=  4'b1111    ; // ç»¿è‰²åˆ†é‡ç»™0
                 end 
-            else                              // ÇàÉ«²ÊÌõ
+            else                              // é’è‰²å½©æ¡
                 begin
-                    red   <=  4'b0000    ; // ÇàÉ«²ÊÌõÊÇÓÉÀ¶ÂÌÁ½ÖÖÑÕÉ«»ìºÏ¶ø³É
-                    green <=  4'b1111   ; // ËùÒÔÇàÉ«²ÊÌõÒª°ÑÀ¶ÂÌÁ½¸ö·ÖÁ¿¸ø1
-                    blue  <=  4'b1111    ; // ºìÉ«·ÖÁ¿¸ø0
+                    red   <=  4'b0000    ; // é’è‰²å½©æ¡æ˜¯ç”±è“ç»¿ä¸¤ç§é¢œè‰²æ··åˆè€Œæˆ
+                    green <=  4'b1111   ; // æ‰€ä»¥é’è‰²å½©æ¡è¦æŠŠè“ç»¿ä¸¤ä¸ªåˆ†é‡ç»™1
+                    blue  <=  4'b1111    ; // çº¢è‰²åˆ†é‡ç»™0
                 end                   
         end
     else
