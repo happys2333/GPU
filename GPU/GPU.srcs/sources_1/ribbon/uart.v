@@ -4,13 +4,13 @@ module uart(
  input [18:0]     number, 
  input wire[18:0] rd_addr,
  output wire [11:0] rd_data,
- input       uart_rx//串口信号 接Y19
+ input    uart_rx,//串口信号 接Y19
+ output  wire wea
  );
  reg    uart_rx_done; 
  reg   [7:0] data;
  reg   start_flag;
  reg[4:0] cnt1;
- wire wea;
  reg		[18:0] 	wr_addr; 
  reg		[11:0]	wr_data;
  reg[1:0] re_cnt;
@@ -29,9 +29,9 @@ blk_mem_gen_0 u_ip_simple_ram (
 always @(posedge clk or negedge rst_n) begin
 	if(!rst_n) begin
 	    fir<=0;
-		wr_addr <= 1'b0;
-		wr_data <= 1'b0;
-		re_cnt<=1'b0;
+		wr_addr <= 19'b0;
+		wr_data <= 12'b0;
+		re_cnt<=2'b0;
 	end
 	else if(uart_rx_done)begin
 	if(re_cnt==2'd0)begin
@@ -46,41 +46,17 @@ always @(posedge clk or negedge rst_n) begin
         re_cnt <= re_cnt+1'b1;
     end
     case(re_cnt)
-	2'd0: wr_data[11:8]<=data-8'd48;
-	2'd1: wr_data[7:4]<=data-8'd48;
-	2'd2: wr_data[3:0]<=data-8'd48;
+	2'd0: wr_data[11:8]<= data < 8'd64 ? data-8'd48:data-8'd55;
+	2'd1: wr_data[7:4]<= data < 8'd64 ? data-8'd48:data-8'd55;
+	2'd2: wr_data[3:0]<= data < 8'd64 ? data-8'd48:data-8'd55;
 	endcase
 	
 	end
-	else if(wr_addr == 19'd307200) begin
-		wr_addr <= 1'b0;
-		wr_data <= 1'b0;	
-	end
 end
-always @(posedge clk or negedge rst_n) begin
-	if(!rst_n) begin
-		wr_addr <= 1'b0;
-		wr_data <= 1'b0;
-	end
-	else if(uart_rx_done) begin
-	if(data==8'b00101100)begin
-        wr_addr<= wr_addr+1'b1;
-        wr_data<=0;
-        end
-        else begin
-            wr_data <= wr_data * 10 + (data-8'd48);
-        end
-	end
-	else if(wr_addr == 19'd307200) begin
-		wr_addr <= 1'b0;
-		wr_data <= 1'b0;	
-	end
-end
-
 //读信号地址
 
 parameter  CLK_FREQ = 100000000; //时钟频率
-parameter  UART_BPS = 115200;      //波特率
+parameter  UART_BPS = 1000000;      //波特率
 localparam PERIOD   = CLK_FREQ/UART_BPS;        
 
 
