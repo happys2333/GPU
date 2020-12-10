@@ -3,6 +3,27 @@
 // Company: 
 // Engineer: 
 // 
+// Create Date: 2020/12/02 10:43:24
+// Design Name: 
+// Module Name: vga
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
 // Create Date: 2020/11/28 15:52:37
 // Design Name: 
 // Module Name: vga
@@ -28,26 +49,27 @@ module vga
     output                  O_vs    , // VGA场同步信号
     output reg[11:0]        R_h_cnt , // 行时序计数器
     output reg[11:0]        R_v_cnt , // 场时序计数器
-    output                  active  
+    output                  active  ,
+    output reg R_clk_25M,
+    output isFist//判断位置是否为第一个       
 );
 //wire clk_25m,locked;
     
 // 分辨率为640*480时行时序各个参数定义
-parameter       C_H_SYNC_PULSE      =   96  , 
+parameter      C_H_SYNC_PULSE      =   96  , 
                 C_H_BACK_PORCH      =   48  ,
                 C_H_ACTIVE_TIME     =   640 ,
                 C_H_FRONT_PORCH     =   16  ,
                 C_H_LINE_PERIOD     =   800 ;
 
 // 分辨率为640*480时场时序各个参数定义               
-parameter       C_V_SYNC_PULSE      =   2   , 
+parameter     C_V_SYNC_PULSE      =   2   , 
                 C_V_BACK_PORCH      =   33  ,
                 C_V_ACTIVE_TIME     =   480 ,
                 C_V_FRONT_PORCH     =   10  ,
                 C_V_FRAME_PERIOD    =   525 ;
                 
 parameter       C_COLOR_BAR_WIDTH   =   C_H_ACTIVE_TIME / 8  ;  
-reg             R_clk_25M       ;
 reg             R_clk_50M       ;
 wire            W_active_flag   ; // 激活标志，当这个信号为1时RGB的数据可以显示在屏幕上
 assign active = W_active_flag;
@@ -94,6 +116,7 @@ begin
 end                
 
 assign O_hs =   (R_h_cnt < C_H_SYNC_PULSE) ? 1'b0 : 1'b1    ; 
+            
 //////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////
@@ -115,9 +138,9 @@ assign O_vs =   (R_v_cnt < C_V_SYNC_PULSE) ? 1'b0 : 1'b1    ;
 //////////////////////////////////////////////////////////////////  
 
 assign W_active_flag =  (R_h_cnt >= (C_H_SYNC_PULSE + C_H_BACK_PORCH                  ))  &&
-                        (R_h_cnt <= (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_H_ACTIVE_TIME))  && 
+                        (R_h_cnt <= (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_H_ACTIVE_TIME-1))  && 
                         (R_v_cnt >= (C_V_SYNC_PULSE + C_V_BACK_PORCH                  ))  &&
-                        (R_v_cnt <= (C_V_SYNC_PULSE + C_V_BACK_PORCH + C_V_ACTIVE_TIME))  ;                     
+                        (R_v_cnt <= (C_V_SYNC_PULSE + C_V_BACK_PORCH + C_V_ACTIVE_TIME-1))  ;                     
 /*
 ////////////////////////////////////////////////////////////////
 // 功能：产生黑白相间的格子图案
@@ -155,3 +178,4 @@ end
 */
 
 endmodule
+
