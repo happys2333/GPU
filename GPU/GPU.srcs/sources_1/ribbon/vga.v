@@ -107,15 +107,15 @@ end
 //////////////////////////////////////////////////////////////////
 always @(posedge R_clk_25M or negedge I_rst_n)
 begin
-    if(!I_rst_n)
+    if(!I_rst_n)                                 //复位
         R_h_cnt <=  12'd0   ;
-    else if(R_h_cnt == C_H_LINE_PERIOD - 1'b1)
+    else if(R_h_cnt == C_H_LINE_PERIOD - 1'b1)   //当行计数器到最大值时，重置行计数器
         R_h_cnt <=  12'd0   ;
-    else
+    else                                         //否则行计数器+1
         R_h_cnt <=  R_h_cnt + 1'b1  ;                
 end                
 
-assign O_hs =   (R_h_cnt < C_H_SYNC_PULSE) ? 1'b0 : 1'b1    ; 
+   assign O_hs =   (R_h_cnt < C_H_SYNC_PULSE) ? 1'b0 : 1'b1;   //输出行同步信号 
             
 //////////////////////////////////////////////////////////////////
 
@@ -124,19 +124,20 @@ assign O_hs =   (R_h_cnt < C_H_SYNC_PULSE) ? 1'b0 : 1'b1    ;
 //////////////////////////////////////////////////////////////////
 always @(posedge R_clk_25M or negedge I_rst_n)
 begin
-    if(!I_rst_n)
+    if(!I_rst_n)                                         //复位
         R_v_cnt <=  12'd0   ;
-    else if(R_v_cnt == C_V_FRAME_PERIOD - 1'b1)
+    else if(R_v_cnt == C_V_FRAME_PERIOD - 1'b1)          //列计数器达到有效时间最大值时归零
         R_v_cnt <=  12'd0   ;
-    else if(R_h_cnt == C_H_LINE_PERIOD - 1'b1)
+    else if(R_h_cnt == C_H_LINE_PERIOD - 1'b1)           //当行计数器达到有效时间最大值时，列计数器+1
         R_v_cnt <=  R_v_cnt + 1'b1  ;
     else
-        R_v_cnt <=  R_v_cnt ;                        
+        R_v_cnt <=  R_v_cnt ;                            //否则保持不变
 end                
 
-assign O_vs =   (R_v_cnt < C_V_SYNC_PULSE) ? 1'b0 : 1'b1    ; 
+   assign O_vs =   (R_v_cnt < C_V_SYNC_PULSE) ? 1'b0 : 1'b1;// 输出场同步信号
 //////////////////////////////////////////////////////////////////  
 
+//该信号指示当前时间是否是显示有效期
 assign W_active_flag =  (R_h_cnt >= (C_H_SYNC_PULSE + C_H_BACK_PORCH                  ))  &&
                         (R_h_cnt <= (C_H_SYNC_PULSE + C_H_BACK_PORCH + C_H_ACTIVE_TIME-1))  && 
                         (R_v_cnt >= (C_V_SYNC_PULSE + C_V_BACK_PORCH                  ))  &&
