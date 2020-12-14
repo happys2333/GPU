@@ -1,21 +1,23 @@
 module uart(
- input            clk    ,
- input            rst_n  ,
- input [18:0]     number, 
- input wire[18:0] rd_addr,
- output wire [11:0] rd_data,
- input    uart_rx,//串口信号 接Y19
- output  wire wea
+ input            clk      ,//输入板载时钟信号
+ input            rst_n    ,//系统复位信号
+ input [18:0]     number   , //所需参数个数
+ input wire[18:0] rd_addr  ,//ram数据读取地址
+ output wire [11:0] rd_data,//ram数据输出
+ input    uart_rx          ,//串口输入信号 接Y19
+ output  wire wea           //ram读写标志，1表示写，0表示读
  );
- reg    uart_rx_done; 
- reg   [7:0] data;
- reg   start_flag;
- reg[4:0] cnt1;
- reg		[18:0] 	wr_addr; 
- reg		[11:0]	wr_data;
+ reg    uart_rx_done;       //单位数据传输完成标志
+ reg   [7:0] data;          //每次从串口读入的8位数据  
+ reg   start_flag;          //串口数据接收开始标志
+ reg   [4:0] cnt1;          //已接收数据个数记录
+ reg   [18:0] 	wr_addr;    //ram写入数据地址
+ reg   [11:0]	wr_data;    //ram写入数据
+	
  reg[1:0] re_cnt;
  reg fir;
-assign wea = wr_addr < number;
+	
+assign wea = wr_addr < number;//所需参数全部读入前，均为写模式
 
 blk_mem_gen_0 u_ip_simple_ram (
   .clka(clk),
