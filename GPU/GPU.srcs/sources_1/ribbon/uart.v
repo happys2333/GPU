@@ -14,11 +14,12 @@ module uart(
  reg   [18:0] 	wr_addr;    //ram写入数据地址
  reg   [11:0]	wr_data;    //ram写入数据
 	
- reg[1:0] re_cnt;
+ reg[1:0] re_cnt;           //每3个输入为一组，代表一个像素点的r,g,b取值。该变量表示当前输入数据是r,g,或b
  reg fir;
 	
 assign wea = wr_addr < number;//所需参数全部读入前，均为写模式
 
+//ram模块
 blk_mem_gen_0 u_ip_simple_ram (
   .clka(clk),
   .wea(wea),
@@ -28,8 +29,9 @@ blk_mem_gen_0 u_ip_simple_ram (
   .addrb(rd_addr),
   .doutb(rd_data)
 );
+	
 always @(posedge clk or negedge rst_n) begin
-	if(!rst_n) begin
+	if(!rst_n) begin                     //复位
 	    fir<=0;
 		wr_addr <= 19'b0;
 		wr_data <= 12'b0;
@@ -38,16 +40,16 @@ always @(posedge clk or negedge rst_n) begin
 	else if(uart_rx_done)begin
 	if(re_cnt==2'd0)begin
 	if(fir)
-    wr_addr<=wr_addr+1'b1;
+    wr_addr <= wr_addr+1'b1;         //每读入3个数据，写入地址+1
     fir<=1'b1; 
     end
-    if(re_cnt==2'd2)begin
+    if(re_cnt == 2'd2)begin          //每读入3个数据，cnt清零
     re_cnt <= 0; 
     end
     else begin
         re_cnt <= re_cnt+1'b1;
     end
-    case(re_cnt)
+	case(re_cnt)                 //根据cnt，将读取的数据分别写入ram当前位的高，中，低4位
 	2'd0: wr_data[11:8]<= data < 8'd64 ? data-8'd48:data-8'd55;
 	2'd1: wr_data[7:4]<= data < 8'd64 ? data-8'd48:data-8'd55;
 	2'd2: wr_data[3:0]<= data < 8'd64 ? data-8'd48:data-8'd55;
@@ -66,8 +68,8 @@ localparam PERIOD   = CLK_FREQ/UART_BPS;
 reg [7:0] rx_data; 
 reg[3:0] cnt;
  
-reg       rx1,rx2;
-wire      start_bit;
+reg       rx1,rx2;                       //来自端口的数据读入rx1,并在下一时刻移入rx2
+wire      start_bit;			 //表示传输是否开始
 
 reg   [15:0]   cnt0;
 wire           add_cnt0;
@@ -78,9 +80,9 @@ wire           add_cnt1;
 wire           end_cnt1;
 
  //下降沿检测 
-assign  start_bit=(rx2)&(~rx1);
+	assign  start_bit=(rx2)&(~rx1);       //串口输入拉低一个时钟周期表示开始，此时rx1恰为0
 
-always  @(posedge clk or negedge rst_n)begin
+always  @(posedge clk or negedge rst_n)begin  //不断读入数据并移位
     if(rst_n==1'b0)begin
          rx1<=1'b0;
          rx2<=1'b0; 
@@ -103,7 +105,7 @@ always  @(posedge clk or negedge rst_n)begin
     end
 end
 
- //start_flag = 1,即传输过程中，cnt0每个时钟周期++，到一个周期后，即1个数据传来后，cnt1++
+ //start_flag = 1,即传输过程中，cnt0每个时钟周期+1，到一个周期后，即1位数传输完成后，cnt1+1
 always @(posedge clk or negedge rst_n)begin
     if(!rst_n)begin
         cnt0 <= 0;
@@ -134,7 +136,7 @@ always @(posedge clk or negedge rst_n)begin
     end
 end
 
-assign add_cnt1 = end_cnt0 ;    
+assign add_cnt1 = end_cnt0 ;    //当1位数据传输完成后，cnt1才会增加
 assign end_cnt1 = (cnt0==((PERIOD-1)/2))&& (cnt1==10-1) ;  
  
 //数据接收
@@ -143,7 +145,7 @@ always  @(posedge clk or negedge rst_n)begin
          rx_data<=8'd0;
       end
       else if(start_flag) begin
-		  if(cnt0== PERIOD/2)begin
+	      if(cnt0== PERIOD/2)begin		//为了采样稳定，只在传输周期中间位置采样。并根据cnt1将读到的数据存入数据暂存rx_data的对应位置。
            case(cnt1)
             4'd1:rx_data[0]<=rx2;
             4'd2:rx_data[1]<=rx2;
@@ -164,7 +166,7 @@ always  @(posedge clk or negedge rst_n)begin
          rx_data<=8'd0;
      end   
   end 
-  //数据接收
+  //数据接收，将rx_data中的数据转入data
  always  @(posedge clk or negedge rst_n)begin
       if(rst_n==1'b0)begin
            data<=0;
