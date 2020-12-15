@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2020/11/21 00:16:31
+// Create Date: 2020/12/14 15:28:51
 // Design Name: 
-// Module Name: main
+// Module Name: simlab
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module main(
+module simlab(
 
     );
 endmodule

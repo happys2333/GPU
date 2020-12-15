@@ -1,0 +1,388 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Dec 10 11:45:48 2020
+# Process ID: 10196
+# Current directory: G:/project/GPU/testfunction/testfunction.runs/synth_1
+# Command line: vivado.exe -log top_greedy_snake.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_greedy_snake.tcl
+# Log file: G:/project/GPU/testfunction/testfunction.runs/synth_1/top_greedy_snake.vds
+# Journal file: G:/project/GPU/testfunction/testfunction.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_greedy_snake.tcl -notrace
+Command: synth_design -top top_greedy_snake -part xc7a100tfgg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 8792
+WARNING: [Synth 8-2611] redeclaration of ansi port clk_n is not allowed [C:/Users/happy/Desktop/sources_1/new/clk_unit.v:8]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1027.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_greedy_snake' [C:/Users/happy/Desktop/sources_1/new/top_greedy_snake.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Game_Ctrl_Unit' [C:/Users/happy/Desktop/sources_1/new/Game_Ctrl_Unit.v:2]
+	Parameter RESTART bound to: 2'b00 
+	Parameter START bound to: 2'b01 
+	Parameter PLAY bound to: 2'b10 
+	Parameter DIE bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'Game_Ctrl_Unit' (1#1) [C:/Users/happy/Desktop/sources_1/new/Game_Ctrl_Unit.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Snake_Eatting_Apple' [C:/Users/happy/Desktop/sources_1/new/Snake_Eatting_Apple.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Snake_Eatting_Apple' (2#1) [C:/Users/happy/Desktop/sources_1/new/Snake_Eatting_Apple.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Snake' [C:/Users/happy/Desktop/sources_1/new/Snake.v:2]
+	Parameter UP bound to: 2'b00 
+	Parameter DOWN bound to: 2'b01 
+	Parameter LEFT bound to: 2'b10 
+	Parameter RIGHT bound to: 2'b11 
+	Parameter NONE bound to: 2'b00 
+	Parameter HEAD bound to: 2'b01 
+	Parameter BODY bound to: 2'b10 
+	Parameter WALL bound to: 2'b11 
+	Parameter RESTART bound to: 2'b00 
+	Parameter PLAY bound to: 2'b10 
+WARNING: [Synth 8-567] referenced signal 'cube_x' should be on the sensitivity list [C:/Users/happy/Desktop/sources_1/new/Snake.v:385]
+WARNING: [Synth 8-567] referenced signal 'cube_y' should be on the sensitivity list [C:/Users/happy/Desktop/sources_1/new/Snake.v:385]
+WARNING: [Synth 8-567] referenced signal 'is_exist' should be on the sensitivity list [C:/Users/happy/Desktop/sources_1/new/Snake.v:385]
+WARNING: [Synth 8-567] referenced signal 'die_flash' should be on the sensitivity list [C:/Users/happy/Desktop/sources_1/new/Snake.v:385]
+INFO: [Synth 8-6155] done synthesizing module 'Snake' (3#1) [C:/Users/happy/Desktop/sources_1/new/Snake.v:2]
+INFO: [Synth 8-6157] synthesizing module 'VGA_top' [C:/Users/happy/Desktop/sources_1/new/VGA_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_unit' [C:/Users/happy/Desktop/sources_1/new/clk_unit.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'clk_unit' (4#1) [C:/Users/happy/Desktop/sources_1/new/clk_unit.v:2]
+INFO: [Synth 8-6157] synthesizing module 'VGA_Control' [C:/Users/happy/Desktop/sources_1/new/VGA_Control.v:2]
+	Parameter NONE bound to: 2'b00 
+	Parameter HEAD bound to: 2'b01 
+	Parameter BODY bound to: 2'b10 
+	Parameter WALL bound to: 2'b11 
+	Parameter HEAD_COLOR bound to: 12'b000011110000 
+	Parameter BODY_COLOR bound to: 12'b000011111111 
+INFO: [Synth 8-6155] done synthesizing module 'VGA_Control' (5#1) [C:/Users/happy/Desktop/sources_1/new/VGA_Control.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'VGA_top' (6#1) [C:/Users/happy/Desktop/sources_1/new/VGA_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Key' [C:/Users/happy/Desktop/sources_1/new/Key.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Key' (7#1) [C:/Users/happy/Desktop/sources_1/new/Key.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Seg_Display' [C:/Users/happy/Desktop/sources_1/new/Seg_Display.v:2]
+	Parameter RESTART bound to: 2'b00 
+INFO: [Synth 8-6155] done synthesizing module 'Seg_Display' (8#1) [C:/Users/happy/Desktop/sources_1/new/Seg_Display.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'top_greedy_snake' (9#1) [C:/Users/happy/Desktop/sources_1/new/top_greedy_snake.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1027.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1027.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1027.012 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1027.012 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc]
+WARNING: [Vivado 12-584] No ports matched 'rst_n'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led4'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led2'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led3'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led1'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'error'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'button_down'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'button_left'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'button_right'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'button_up'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'button_down'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'button_left'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'button_right'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'button_up'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'error'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led1'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led2'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led3'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led4'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rst_n'. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [G:/project/GPU/testfunction/testfunction.srcs/constrs_1/new/test.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_greedy_snake_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_greedy_snake_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1083.734 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1083.734 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1083.734 ; gain = 56.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1083.734 ; gain = 56.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1083.734 ; gain = 56.723
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'game_status_reg' in module 'Game_Ctrl_Unit'
+INFO: [Synth 8-802] inferred FSM for state register 'direct_r_reg' in module 'Snake'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   START |                               00 |                               01
+                    PLAY |                               01 |                               10
+                     DIE |                               10 |                               11
+                 RESTART |                               11 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'game_status_reg' using encoding 'sequential' in module 'Game_Ctrl_Unit'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                               11
+                 iSTATE2 |                               01 |                               01
+                  iSTATE |                               10 |                               10
+                 iSTATE0 |                               11 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'direct_r_reg' using encoding 'sequential' in module 'Snake'
+WARNING: [Synth 8-327] inferring latch for variable 'snake_reg' [C:/Users/happy/Desktop/sources_1/new/Snake.v:388]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1083.734 ; gain = 56.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 4     
+	   2 Input   20 Bit       Adders := 1     
+	   2 Input   19 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 3     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 8     
++---Registers : 
+	               32 Bit    Registers := 6     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 33    
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 23    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 17    
+	   4 Input   32 Bit        Muxes := 1     
+	   4 Input   20 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 1     
+	   2 Input   19 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 1     
+	   6 Input    8 Bit        Muxes := 1     
+	   9 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 3     
+	  11 Input    7 Bit        Muxes := 7     
+	   8 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 34    
+	   2 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 9     
+	   6 Input    2 Bit        Muxes := 1     
+	  13 Input    2 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 8     
+	   7 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 44    
+	   3 Input    1 Bit        Muxes := 3     
+	  11 Input    1 Bit        Muxes := 8     
+	   9 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1083.734 ; gain = 56.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1083.734 ; gain = 56.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1083.734 ; gain = 56.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1083.734 ; gain = 56.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1088.426 ; gain = 61.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1088.426 ; gain = 61.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1088.426 ; gain = 61.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1088.426 ; gain = 61.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1088.426 ; gain = 61.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1088.426 ; gain = 61.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    42|
+|3     |LUT1   |     6|
+|4     |LUT2   |   303|
+|5     |LUT3   |    84|
+|6     |LUT4   |   144|
+|7     |LUT5   |   167|
+|8     |LUT6   |   323|
+|9     |MUXF7  |     1|
+|10    |FDCE   |   448|
+|11    |FDPE   |    22|
+|12    |FDRE   |    38|
+|13    |LD     |     2|
+|14    |IBUF   |     6|
+|15    |OBUF   |    29|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1088.426 ; gain = 61.414
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1088.426 ; gain = 4.691
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1088.426 ; gain = 61.414
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1096.328 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 45 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1097.020 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  LD => LDCE: 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 26 Warnings, 20 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 1097.020 ; gain = 70.008
+INFO: [Common 17-1381] The checkpoint 'G:/project/GPU/testfunction/testfunction.runs/synth_1/top_greedy_snake.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_greedy_snake_utilization_synth.rpt -pb top_greedy_snake_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 10 11:46:40 2020...
