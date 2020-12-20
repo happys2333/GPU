@@ -2,12 +2,15 @@ module uart2(
  input[1:0] functional,
  input            clk  ,
  input            rst_n ,
- input [18:0]   rd_addr,
- output [11:0]  rd_data,
+ output reg[11:0]x1 =12'b0,x2=12'b0,x3=12'b0,x4=12'b0,y1=12'b0,y2=12'b0,y3=12'b0,y4=12'b0,
+ output reg[3:0]r=4'b0,g=4'b0,b=4'b0,
+ input[18:0] rd_addr,
+ output[11:0] rd_data,
  input       uart_rx,//串口信号 接Y19
- output [1:0 ]functionChoice//判断功能的执行模块
+ output reg [2:0 ]functionChoice = 3'd4 //判断功能的执行模块
  );
- reg[5:0] number = 8'b10;
+ reg [2:0] functionChoice2 = 3'd4;
+ reg[5:0] number = 6'b10;
  reg    uart_rx_done; 
  reg   [7:0] data;
  reg   start_flag;
@@ -16,22 +19,19 @@ module uart2(
  reg		[11:0]	wr_data;
  reg[1:0] re_cnt;
  reg fir;
-
 blk_mem_gen_1 u_ip_simple_ram (
   .clka(clk),
   .wea(1),
   .addra(wr_addr),
   .dina(wr_data),
   .clkb(clk),
-  .addrb(rd_addr),
-  .doutb(rd_data)
+ .addrb(rd_addr),
+ .doutb(rd_data)
 );
 always @(posedge clk or negedge rst_n) begin
-	if(!rst_n) begin
-        begin  	
+	if(!rst_n) begin 	
 		wr_addr <= 19'b0;
 		wr_data <= 12'b0;
-		end
 	end
 	else if(functional[0])
 	begin
@@ -39,24 +39,221 @@ always @(posedge clk or negedge rst_n) begin
     wr_data <= 12'b0;
 	end
 	else if(uart_rx_done) begin
-	if(data==8'b00101100)begin
+	 if(data == 8'b01100001)//点
+	 begin
+	 functionChoice2 = 3'd0;
+	 number <= 6'd5;
+	 end
+	else if(data == 8'b01100010)//直线
+         begin
+         functionChoice2 = 3'd1;
+         number <= 6'd7;
+         end
+    else if(data == 8'b01100011)//矩形
+          begin
+          functionChoice2 = 3'd2;
+              number <= 6'd11;
+          end
+    else if(data == 8'b01100100)//圆
+         begin
+         functionChoice2 = 3'd3;
+                number <= 6'd6;
+         end
+
+	else if(data==8'b00101100)begin	
         wr_addr<= wr_addr+1'b1;
         wr_data<=0;
         end
         else begin
-            wr_data <= wr_data * 10 + (data-8'd48);
+        wr_data <= wr_data * 10 + (data-8'd48);
+        case(wr_addr)
+        19'd0:
+          begin
+          x1 <= wr_data * 10 + (data-8'd48);
+          end
+       19'd1:
+              begin
+              y1<=wr_data * 10 + (data-8'd48);
+              end
+       19'd2:
+              begin  
+               case(functionChoice2)
+               3'd0:
+               begin
+               r <=wr_data * 10 + (data-8'd48);
+               end
+               3'd1:
+               begin
+               x2 <=wr_data * 10 + (data-8'd48);
+               end
+               3'd2:
+               begin
+                x2 <= wr_data * 10 + (data-8'd48);
+               end
+               3'd3:
+               begin
+                r <=wr_data * 10 + (data-8'd48);
+               end
+               endcase
+              end   
+       19'd3:
+              begin
+                    case(functionChoice2)
+                     3'd0:
+                     begin
+                     g <=wr_data * 10 + (data-8'd48);
+                     end
+                     3'd1:
+                     begin
+                     y2 <= wr_data * 10 + (data-8'd48);
+                     end
+                     3'd2:
+                     begin
+                    y2 <= wr_data * 10 + (data-8'd48);
+                     end
+                     3'd3:
+                     begin
+                     end
+                     endcase
+              end
+       19'd4:
+            begin
+                    case(functionChoice2)
+                   3'd0:
+                   begin
+                   b <= wr_data * 10 + (data-8'd48);
+                   end
+                   3'd1:
+                   begin
+                   r <= wr_data * 10 + (data-8'd48);
+                   end
+                   3'd2:
+                   begin
+                    x3 <= wr_data * 10 + (data-8'd48);
+                   end
+                   3'd3:
+                   begin
+                   end
+                   endcase
+              end  
+      19'd5:
+            begin
+                 case(functionChoice2)
+                        3'd0:
+                        begin
+                        end
+                        3'd1:
+                        begin
+                        g <=wr_data * 10 + (data-8'd48);
+                        end
+                        3'd2:
+                        begin
+                        y3 <= wr_data * 10 + (data-8'd48);
+                        end
+                        3'd3:
+                        begin
+                        end
+                        endcase  
+            end
+      19'd6:
+            begin
+             case(functionChoice2)
+                     3'd0:
+                     begin
+                     end
+                     3'd1:
+                     begin
+                     b <=wr_data * 10 + (data-8'd48);
+                     end
+                     3'd2:
+                     begin
+                     x4 <= wr_data * 10 + (data-8'd48);
+                     end
+                     3'd3:
+                     begin
+                     end
+                     endcase   
+            end
+      19'd7:
+            begin
+              case(functionChoice2)
+                              3'd0:
+                              begin
+                              end
+                              3'd1:
+                              begin
+                              end
+                              3'd2:
+                              begin
+                              y4 <= wr_data * 10 + (data-8'd48);
+                              end
+                              3'd3:
+                              begin
+                              end
+                              endcase    
+            end
+      19'd8:
+            begin
+              case(functionChoice2)
+                                      3'd0:
+                                       begin
+                                       end
+                                       3'd1:
+                                       begin
+                                       end
+                                       3'd2:
+                                       begin
+                                       r <= wr_data * 10 + (data-8'd48);
+                                       end
+                                       3'd3:
+                                       begin
+                                       end
+                                       endcase     
+            end
+      19'd9:
+           begin 
+           end
+       19'd10:
+           begin
+           end
+       19'd11:
+           begin
+           end                                                                                   
+        endcase                                                                     
         end
 	end
 	else if(wr_addr == number) begin
-		wr_addr <= 19'b0;
-		wr_data <= 12'b0;
+	    if(number ==6'd5 )
+	    begin
+	           functionChoice <= 2'd0;
+	           wr_addr <= 19'b0;
+               number <=  6'b0;
+	    end
+	    else if(number == 6'd7)
+	    begin
+	           functionChoice <= 2'd1;
+	            wr_addr <= 19'b0;
+                number <=  6'b0;
+	    end
+	    else if(number == 6'd11)
+	    begin
+	           functionChoice <= 2'd2;
+	           wr_addr <= 19'b0;
+               number <=  6'b0;
+	    end
+	    else if (number == 6'd6)
+	    begin
+	           functionChoice <= 2'd3;
+	           wr_addr <= 19'b0;
+               number <=  6'b0;
+	    end
 	end
 end
 
 //读信号地址
 
-parameter  CLK_FREQ = 100000000; //时钟频率
-parameter  UART_BPS = 115200;      //波特率
+parameter  CLK_FREQ =100000000; //时钟频率
+parameter  UART_BPS = 1000000;   //波特率
 localparam PERIOD   = CLK_FREQ/UART_BPS;        
 
 
