@@ -32,7 +32,7 @@ module uart(
  input    uart_rx,//串口信号 接Y19
  input[1:0] functional,
  output  wire wea,
- output active//控制vga信号是否输出
+ input active//控制vga信号是否输出
  );
  reg    uart_rx_done; 
  reg   [7:0] data;
@@ -52,24 +52,23 @@ blk_mem_gen_0 u_ip_simple_ram0 (
   .addrb(rd_addr),
   .doutb(rd_data)
 );
-
+reg delay = 1'b0;
+wire [2:0 ]functionChoice;
 //根据输入的数据的个数来选择执行哪个画图模块
 reg [18:0] rd_addr3 = 19'b0;
 wire[11:0] rd_data3;
-wire [1:0 ]functionChoice;
-uart2 ip(functional,clk,rst_n,rd_addr3,rd_data3, uart_rx,functionChoice); 
-reg [11:0]radius;//定义园的半径
-reg [11:0]x1;
-reg [11:0]y1;
-reg [11:0]x2;
-reg [11:0]y2;
-reg [11:0]x3;
-reg [11:0]y3;
-reg [11:0]x4;
-reg [11:0]y4;
-reg [3:0]r,g,b;
-wire [18:0] wr_addr2 ;
-wire [11:0] wr_data2 ;
+wire [11:0]radius;//定义园的半径
+wire [11:0]x1;
+wire [11:0]y1;
+wire [11:0]x2;
+wire [11:0]y2;
+wire [11:0]x3;
+wire [11:0]y3;
+wire [11:0]x4;
+wire [11:0]y4;
+wire [3:0]r,g,b;
+wire [18:0] wr_addr2;
+wire [11:0] wr_data2;
 wire [18:0] wr_addr3;
 wire [11:0] wr_data3 ;
 wire [18:0] wr_addr4;
@@ -77,98 +76,7 @@ wire [11:0] wr_data4 ;
 wire [18:0] wr_addr5;
 wire [11:0] wr_data5;
 point point2(functionChoice,x1,y1,r,g,b,h_cnt,v_cnt,clock,rst_n,wr_addr2,wr_data2,active);  
-always @(posedge clk or negedge rst_n) begin
-	if(!rst_n | functional[0]) 
-	  begin
-	  x1 <=12'b0;
-      x2 <=12'b0;
-	  x3 <=12'b0;
-	  x4 <=12'b0;
-	  y1 <=12'b0;
-	  y2 <=12'b0;
-	  y3 <=12'b0;
-	  y4 <=12'b0;
-	  r  <=4'b0;
-	  g  <=4'b0;
-	  b  <=4'b0;
-	  end
-	  else 
-	  begin
-	   case(functionChoice)
-	   2'd0://point 
-	       begin
-	       x1 <= rd_data3;
-	       rd_addr3 = rd_addr3 + 1'b1;
-	       y1 <= rd_data3;
-	       rd_addr3 = rd_addr3 + 1'b1;
-	       r <= rd_data3;
-	       rd_addr3 = rd_addr3 + 1'b1;
-	       g <= rd_data3;
-	       rd_addr3 = rd_addr3 + 1'b1;
-	       b <= rd_data3;
-	       rd_addr3 = 19'b0;
-	       end
-	   2'd1://直线
-	       begin
-	                x1 <= rd_data3;
-                    rd_addr3 = rd_addr3 + 1'b1;
-                    y1 <= rd_data3;
-                    rd_addr3 = rd_addr3 + 1'b1;
-                    x2 <=rd_data3;
-                    rd_addr3 = rd_addr3 + 1'b1;
-                    y2 <=rd_data3;
-                    rd_addr3 = rd_addr3 + 1'b1;
-                    r <= rd_data3;
-                    rd_addr3 = rd_addr3 + 1'b1;
-                    g <= rd_data3;
-                    rd_addr3 = rd_addr3 + 1'b1;
-                    b <= rd_data3;
-                    rd_addr3 = 19'b0;
-	       end
-	   2'd2://矩形
-	   begin
-	                      x1 <= rd_data3;
-                          rd_addr3 = rd_addr3 + 1'b1;
-                          y1 <= rd_data3;
-                          rd_addr3 = rd_addr3 + 1'b1;
-                          x2 <=rd_data3;
-                          rd_addr3 = rd_addr3 + 1'b1;
-                          y2 <=rd_data3;
-                          rd_addr3 = rd_addr3 + 1'b1;
-                          x3 <=rd_data3;
-                          rd_addr3 = rd_addr3 + 1'b1;
-                          y3 <= rd_data3;
-                          rd_addr3 = rd_addr3 + 1'b1;
-                          x4 <= rd_data3;
-                          rd_addr3 = rd_addr3 + 1'b1;
-                          y4 <= rd_data3;
-                          rd_addr3 = rd_addr3 + 1'b1;
-                          r <= rd_data3;
-                          rd_addr3 = rd_addr3 + 1'b1;
-                          g <= rd_data3;
-                          rd_addr3 = rd_addr3 + 1'b1;
-                          b <= rd_data3;
-                          rd_addr3 = 19'b0;
-	   end
-	   2'd3: //园
-	   begin
-	   
-	                           x1 <= rd_data3;
-	                           rd_addr3 = rd_addr3 + 1'b1;
-                               y1 <= rd_data3;
-                               rd_addr3 = rd_addr3 + 1'b1;
-                               radius <= rd_data3;
-                               rd_addr3 = rd_addr3 + 1'b1;
-                               r <= rd_data3;
-                               rd_addr3 = rd_addr3 + 1'b1;
-                               g <= rd_data3;
-                               rd_addr3 = rd_addr3 + 1'b1;
-                               b <= rd_data3;
-                               rd_addr3 = 19'b0;
-	   end
-	   endcase
-	  end
-	end
+uart2 ip(functional,clk,rst_n,x1,x2,x3,x4,y1,y2,y3,y4,r,g,b,rd_addr3,rd_data3, uart_rx,functionChoice); 
 always @(posedge clk or negedge rst_n) begin
 	if(!rst_n) begin
 	    fir<=0;
@@ -178,8 +86,8 @@ always @(posedge clk or negedge rst_n) begin
 	end
 	else if(!functional[0])
 	begin
-	  wr_addr <= wr_addr2 | wr_addr3 | wr_addr4 | wr_addr5;
-	  wr_data <= wr_data | wr_data2 | wr_data3 | wr_data4 | wr_data5;
+    wr_addr <=  wr_addr2;
+    wr_data <=  wr_data2 ;
 	end
 	else if(uart_rx_done)begin
 	if(re_cnt==2'd0)begin
