@@ -20,25 +20,28 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
+//--------------start of module define--------------
 module canvas(
-input rst,//复位信号
-input  [11:0]h_cnt,//行计算器
-input  [11:0]v_cnt,//列计算器
-input  clock,//刷新率
-input wire  [18:0] rd_addr,
-input [11:0] rd_data,
-output reg [3:0] red,
-output reg [3:0] green,
-output reg [3:0] blue 
-    );
-     always @(posedge clock or negedge rst)
-            begin
-                 if(!rst) 
-                      begin
-      
-                      red <= 4'b0000;
-                      green <= 4'b0000;
-                      blue <= 4'b0000;
-                      end
-            end          
+    input                                   rst                 ,
+    input               [11:0]              h_cnt               ,
+    input               [11:0]              v_cnt               ,
+    input                                   clock               ,
+    wire                [18:0]              rd_addr             ,
+    input               [11:0]              rd_data             ,
+    output reg          [3:0]               red                 ,
+    output reg          [3:0]               green               ,
+    output reg          [3:0]               blue                
+                );
+//--------------end of module define--------------
+
+
+always @(posedge clock or negedge rst)
+begin
+    if(!rst) 
+    begin
+        red <= 4'b0000;
+        green <= 4'b0000;
+        blue <= 4'b0000;
+    end
+end          
 endmodule
