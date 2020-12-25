@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="sssssss3_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="sssssss3" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="100968758340fs"></ZoomEndTime>
+      <Cursor1Time time="19941855000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="105"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/sssssss3/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/ip/point2/x1" type="array">
+      <obj_property name="ElementShortName">x1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">x1[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/ip/point2/y1" type="array">
+      <obj_property name="ElementShortName">y1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">y1[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/ip/point2/wr_addr2" type="array">
+      <obj_property name="ElementShortName">wr_addr2[18:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_addr2[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/ip/point2/wr_data2" type="array">
+      <obj_property name="ElementShortName">wr_data2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_data2[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/ip/r" type="array">
+      <obj_property name="ElementShortName">r[3:0]</obj_property>
+      <obj_property name="ObjectShortName">r[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/ip/g" type="array">
+      <obj_property name="ElementShortName">g[3:0]</obj_property>
+      <obj_property name="ObjectShortName">g[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/ip/b" type="array">
+      <obj_property name="ElementShortName">b[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/uart_rx" type="logic">
+      <obj_property name="ElementShortName">uart_rx</obj_property>
+      <obj_property name="ObjectShortName">uart_rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/ip/ip/number" type="array">
+      <obj_property name="ElementShortName">number[5:0]</obj_property>
+      <obj_property name="ObjectShortName">number[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/ip/ip/functionChoice" type="array">
+      <obj_property name="ElementShortName">functionChoice[2:0]</obj_property>
+      <obj_property name="ObjectShortName">functionChoice[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/ip/ip/wr_addr" type="array">
+      <obj_property name="ElementShortName">wr_addr[18:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_addr[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/ip/ip/wr_data" type="array">
+      <obj_property name="ElementShortName">wr_data[11:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_data[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/ip/ip/rd_addr" type="array">
+      <obj_property name="ElementShortName">rd_addr[18:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_addr[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/ip/ip/rd_data" type="array">
+      <obj_property name="ElementShortName">rd_data[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_data[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/vg/active" type="logic">
+      <obj_property name="ElementShortName">active</obj_property>
+      <obj_property name="ObjectShortName">active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/vg/W_active_flag" type="logic">
+      <obj_property name="ElementShortName">W_active_flag</obj_property>
+      <obj_property name="ObjectShortName">W_active_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/vg/R_h_cnt" type="array">
+      <obj_property name="ElementShortName">R_h_cnt[11:0]</obj_property>
+      <obj_property name="ObjectShortName">R_h_cnt[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/vg/R_v_cnt" type="array">
+      <obj_property name="ElementShortName">R_v_cnt[11:0]</obj_property>
+      <obj_property name="ObjectShortName">R_v_cnt[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/red" type="array">
+      <obj_property name="ElementShortName">red[3:0]</obj_property>
+      <obj_property name="ObjectShortName">red[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/green" type="array">
+      <obj_property name="ElementShortName">green[3:0]</obj_property>
+      <obj_property name="ObjectShortName">green[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/blue" type="array">
+      <obj_property name="ElementShortName">blue[3:0]</obj_property>
+      <obj_property name="ObjectShortName">blue[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/r" type="array">
+      <obj_property name="ElementShortName">r[3:0]</obj_property>
+      <obj_property name="ObjectShortName">r[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/g" type="array">
+      <obj_property name="ElementShortName">g[3:0]</obj_property>
+      <obj_property name="ObjectShortName">g[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sssssss3/ut/b" type="array">
+      <obj_property name="ElementShortName">b[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b[3:0]</obj_property>
+   </wvobject>
+</wave_config>

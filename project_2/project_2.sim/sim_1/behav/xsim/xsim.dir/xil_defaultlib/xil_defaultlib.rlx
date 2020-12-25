@@ -1,0 +1,27 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+C:/Users/12321/Desktop/project_2/project_2.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sim_1/new/ssss2.v,1607515521,verilog,,,,ssss2,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sim_1/new/sssssss3.v,1608451615,verilog,,,,sssssss3,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v,1607149067,verilog,,C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Line.v,,blk_mem_gen_0,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/sim/blk_mem_gen_0_1.v,1608476145,verilog,,C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/LEDOUT.v,,blk_mem_gen_0_1,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v,1608279693,verilog,,C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/sim/blk_mem_gen_0_1.v,,blk_mem_gen_1,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/LEDOUT.v,1608557207,verilog,,C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Line.v,,LEDOUT,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Line.v,1608487660,verilog,,C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Triangle.v,,Line,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Triangle.v,1608467936,verilog,,C:/Users/12321/Desktop/sources_1/new/VGA_top.v,,Triangle,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/circular.v,1608464260,verilog,,C:/Users/12321/Desktop/sources_1/new/control.v,,circular,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/point.v,1608442685,verilog,,C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/rectangular.v,,point,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/rectangular.v,1608469662,verilog,,C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/ribbon.v,,rectangular,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/ribbon.v,1608474584,verilog,,C:/Users/12321/Desktop/sources_1/new/seg_play.v,,ribbon,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/top.v,1608476142,verilog,,C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart.v,,top,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart.v,1608446262,verilog,,C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v,,uart,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v,1608451177,verilog,,C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v,,uart2,,,,,,,,
+C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v,1607604854,verilog,,C:/Users/12321/Desktop/project_2/project_2.srcs/sim_1/new/sssssss3.v,,vga,,,,,,,,
+,,,,C:/Users/12321/Desktop/sources_1/new/apple.v,,VGA_top;VGA_use;clk_use,,,,,,,,
+,,,,C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/circular.v,,apple,,,,,,,,
+,,,,C:/Users/12321/Desktop/sources_1/new/play_snake_game.v,,Game_Control;Keyboard,,,,,,,,
+,,,,C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/point.v,,play_snake_game,,,,,,,,
+,,,,C:/Users/12321/Desktop/sources_1/new/snake.v,,seg_play,,,,,,,,
+,,,,C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/top.v,,snake,,,,,,,,

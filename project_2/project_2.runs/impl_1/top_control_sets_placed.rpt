@@ -1,0 +1,142 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Mon Dec 21 22:00:26 2020
+| Host         : LAPTOP-2METBDBE running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    69 |
+| Unused register locations in slices containing registers |   241 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              42 |           24 |
+| No           | No                    | Yes                    |             210 |           78 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             139 |           59 |
+| Yes          | No                    | Yes                    |             594 |          227 |
+| Yes          | Yes                   | No                     |              46 |           15 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------+-----------------------------------+---------------------------------+------------------+----------------+
+|           Clock Signal          |           Enable Signal           |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++---------------------------------+-----------------------------------+---------------------------------+------------------+----------------+
+|  snake1/vg/c/tmp                |                                   | rst_n_IBUF                      |                1 |              1 |
+|  clock_BUFG                     | ip/ip/wr_addr6_reg[0][0]          | LEDOUT2/led_reg[0]_0            |                1 |              1 |
+|  vg/R_clk_50M                   |                                   | LEDOUT2/led_reg[0]_0            |                1 |              1 |
+|  snake1/vg/V/color_out_reg[3]_0 |                                   |                                 |                1 |              2 |
+|  clock_BUFG                     | ip/ip/wr_addr2_reg[0][0]          | ip/triangle2/wr_addr6_reg[17]_0 |                2 |              3 |
+|  clock_BUFG                     | ip/ip/E[0]                        | ip/triangle2/wr_addr6_reg[17]_0 |                3 |              3 |
+|  vg/clock2_BUFG                 | vg/green_reg[0]                   |                                 |                2 |              4 |
+|  vg/clock2_BUFG                 | vg/green_reg[0]                   | snake1/vg/V/green_reg[0]        |                2 |              4 |
+|  vg/clock2_BUFG                 | vg/green_reg[0]                   | vg/blue_reg[3]_0                |                3 |              4 |
+|  clock_BUFG                     | ip/line2/wr_addr3[18]_i_1_n_0     | ip/triangle2/wr_addr6_reg[17]_0 |                4 |              4 |
+|  clk_IBUF_BUFG                  | snake1/seg/sorce[27]_i_1_n_0      | rst_n_IBUF                      |                1 |              4 |
+|  clk_IBUF_BUFG                  |                                   | LEDOUT2/led_reg[0]_0            |                2 |              4 |
+|  clk_IBUF_BUFG                  | ip/ip/number                      |                                 |                2 |              4 |
+|  clk_IBUF_BUFG                  | ip/ip/r[3]_i_1_n_0                |                                 |                4 |              4 |
+|  clk_IBUF_BUFG                  | snake1/seg/sorce[11]_i_1_n_0      | rst_n_IBUF                      |                2 |              4 |
+|  clk_IBUF_BUFG                  | snake1/seg/sorce[19]_i_1_n_0      | rst_n_IBUF                      |                2 |              4 |
+|  clk_IBUF_BUFG                  | snake1/seg/sorce[7]_i_1_n_0       | rst_n_IBUF                      |                1 |              4 |
+|  clk_IBUF_BUFG                  | snake1/seg/sorce[15]_i_1_n_0      | rst_n_IBUF                      |                2 |              4 |
+|  clk_IBUF_BUFG                  | snake1/seg/sorce[31]_i_1_n_0      | rst_n_IBUF                      |                2 |              4 |
+|  clk_IBUF_BUFG                  | snake1/seg/sorce[23]_i_1_n_0      | rst_n_IBUF                      |                2 |              4 |
+|  clk_IBUF_BUFG                  | ip/ip/g[3]_i_1_n_0                |                                 |                2 |              4 |
+|  clk_IBUF_BUFG                  | ip/ip/b[3]_i_1_n_0                |                                 |                1 |              4 |
+|  clk_IBUF_BUFG                  | snake1/keyboard/left_key_last     | rst_n_IBUF                      |                2 |              4 |
+|  clk_IBUF_BUFG                  | ip/ip/wr_data_reg[11]_1[2]        | ip/triangle2/wr_addr6_reg[17]_0 |                2 |              4 |
+|  clk_IBUF_BUFG                  | ip/ip/wr_data_reg[11]_1[0]        | ip/triangle2/wr_addr6_reg[17]_0 |                2 |              4 |
+|  clk_IBUF_BUFG                  | ip/ip/wr_data_reg[11]_1[1]        | ip/triangle2/wr_addr6_reg[17]_0 |                3 |              4 |
+|  clk_IBUF_BUFG                  | ip/ip/cnt1[4]_i_1__0_n_0          | ip/ip/wr_addr[18]_i_3_n_0       |                1 |              5 |
+|  clk_IBUF_BUFG                  | ip/cnt1[4]_i_1_n_0                | ip/triangle2/wr_addr6_reg[17]_0 |                3 |              5 |
+|  clk_IBUF_BUFG                  | ip/end_cnt1                       | ip/triangle2/wr_addr6_reg[17]_0 |                2 |              6 |
+|  clk_IBUF_BUFG                  | snake1/s/cube_x[0][5]_i_1_n_0     | rst_n_IBUF                      |                5 |              6 |
+|  clk_IBUF_BUFG                  | snake1/s/cube_y[0][5]_i_1_n_0     | rst_n_IBUF                      |                4 |              6 |
+|  clk_IBUF_BUFG                  | LEDOUT2/led[7]_i_1__0_n_0         | LEDOUT2/led_reg[0]_0            |                2 |              7 |
+|  clk_IBUF_BUFG                  | snake1/seg/seg_out[6]_i_1_n_0     | rst_n_IBUF                      |                4 |              7 |
+|  clk_IBUF_BUFG                  | snake1/seg/led[7]_i_1_n_0         | rst_n_IBUF                      |                6 |              8 |
+|  clk_IBUF_BUFG                  | ip/ip/end_cnt1_10                 | ip/ip/wr_addr[18]_i_3_n_0       |                4 |              8 |
+|  clk_cnt_reg[19]_i_2_n_0        | snake1/vg/V/line_cnt[9]_i_1_n_0   | rst_n_IBUF                      |                2 |             10 |
+|  clk_IBUF_BUFG                  | ip/ip/wr_data[11]_i_1__0_n_0      | ip/ip/wr_addr[18]_i_3_n_0       |                4 |             11 |
+|  clk_IBUF_BUFG                  | snake1/c/E[0]                     | rst_n_IBUF                      |                5 |             11 |
+|  clk_IBUF_BUFG                  | snake1/a/apple_y[4]_i_1_n_0       | rst_n_IBUF                      |                3 |             11 |
+|  clk_IBUF_BUFG                  | ip/ip/x1_reg[11]_1                |                                 |                5 |             12 |
+|  clk_IBUF_BUFG                  | ip/ip/y4[11]_i_1_n_0              |                                 |                4 |             12 |
+|  clk_IBUF_BUFG                  |                                   | ip/ip/wr_addr[18]_i_3_n_0       |                4 |             12 |
+|  clk_IBUF_BUFG                  | ip/ip/y2_reg[11]_0[0]             |                                 |                4 |             12 |
+|  clk_IBUF_BUFG                  | ip/ip/y3_reg[11]_0[0]             |                                 |                4 |             12 |
+|  clk_IBUF_BUFG                  | ip/ip/x3_reg[11]_0[0]             |                                 |                4 |             12 |
+|  clock_BUFG                     | vg/R_v_cnt0                       | ip/point2/wr_addr2_reg[3]_0     |                3 |             12 |
+|  clk_IBUF_BUFG                  | ip/ip/x2_reg[11]_0                |                                 |                9 |             12 |
+|  clk_IBUF_BUFG                  | ip/ip/y1_reg[11]_0                |                                 |                4 |             12 |
+|  clk_IBUF_BUFG                  | ip/ip/x4[11]_i_1_n_0              |                                 |                5 |             12 |
+|  clk_IBUF_BUFG                  |                                   | ip/triangle2/wr_addr6_reg[17]_0 |                4 |             13 |
+|  clock_BUFG                     |                                   | ip/point2/wr_addr2_reg[3]_0     |                6 |             15 |
+|  clock_BUFG                     | ip/Circular2/wr_addr5[18]_i_1_n_0 | ip/triangle2/wr_addr6_reg[17]_0 |                6 |             15 |
+|  clk_IBUF_BUFG                  | ip/ip/cnt0[15]_i_1__0_n_0         | ip/ip/wr_addr[18]_i_3_n_0       |                4 |             16 |
+|  clock_BUFG                     | ip/Circular2/wr_addr5[18]_i_1_n_0 | ip/point2/wr_addr2_reg[3]_0     |                7 |             16 |
+|  clk_IBUF_BUFG                  | ip/cnt0[15]_i_1_n_0               | ip/triangle2/wr_addr6_reg[17]_0 |                7 |             16 |
+|  clk_IBUF_BUFG                  | ip/ip/wr_addr[18]_i_1__0_n_0      | ip/ip/wr_addr[18]_i_3_n_0       |                5 |             19 |
+|  clk_IBUF_BUFG                  | rst_IBUF                          | LEDOUT2/clk_s[18]_i_1_n_0       |                6 |             19 |
+|  vg/clock2_BUFG                 | vg/rd_addr                        | vg/rd_addr_reg[18]              |                4 |             19 |
+|  clk_IBUF_BUFG                  | ip/ip/wr_addr_reg[0]_0[0]         | ip/triangle2/wr_addr6_reg[17]_0 |                6 |             19 |
+|  clk_cnt_reg[19]_i_2_n_0        |                                   | rst_n_IBUF                      |               12 |             22 |
+|  clk_cnt_reg[19]_i_2_n_0        | snake1/vg/V/rst_n                 |                                 |                9 |             23 |
+|  clock_BUFG                     | ip/line2/wr_addr3[18]_i_1_n_0     | ip/point2/wr_addr2_reg[3]_0     |               13 |             27 |
+|  clock_BUFG                     | ip/ip/E[0]                        | ip/point2/wr_addr2_reg[3]_0     |                7 |             28 |
+|  clock_BUFG                     | ip/ip/wr_addr2_reg[0][0]          | ip/point2/wr_addr2_reg[3]_0     |               12 |             28 |
+|  clock_BUFG                     | ip/ip/wr_addr6_reg[0][0]          | ip/triangle2/wr_addr6_reg[17]_0 |               12 |             30 |
+|  clk_IBUF_BUFG                  | snake1/c/clk_cnt[31]_i_1__0_n_0   | rst_n_IBUF                      |                8 |             32 |
+|  clk_IBUF_BUFG                  |                                   |                                 |               23 |             40 |
+|  clk_IBUF_BUFG                  |                                   | rst_n_IBUF                      |               48 |            142 |
+|  clk_IBUF_BUFG                  | snake1/s/cube_y                   | rst_n_IBUF                      |               61 |            180 |
++---------------------------------+-----------------------------------+---------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     3 |
+| 2      |                     1 |
+| 3      |                     2 |
+| 4      |                    20 |
+| 5      |                     2 |
+| 6      |                     3 |
+| 7      |                     2 |
+| 8      |                     2 |
+| 10     |                     1 |
+| 11     |                     3 |
+| 12     |                    10 |
+| 13     |                     1 |
+| 15     |                     2 |
+| 16+    |                    17 |
++--------+-----------------------+
+
+

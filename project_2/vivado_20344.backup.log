@@ -1,0 +1,890 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Dec 21 13:03:07 2020
+# Process ID: 20344
+# Current directory: C:/Users/12321/Desktop/project_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23748 C:\Users\12321\Desktop\project_2\project_2.xpr
+# Log file: C:/Users/12321/Desktop/project_2/vivado.log
+# Journal file: C:/Users/12321/Desktop/project_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/12321/Desktop/project_2/project_2.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/12321/Desktop/draw_top.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/sdad/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 786.719 ; gain = 65.852
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Mon Dec 21 13:08:47 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 13:11:01 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+[Mon Dec 21 13:11:01 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 13:12:03 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 13:13:48 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+add_files -norecurse {C:/Users/12321/Desktop/sources_1/new/apple.v C:/Users/12321/Desktop/sources_1/new/snake.v C:/Users/12321/Desktop/sources_1/new/seg_play.v C:/Users/12321/Desktop/sources_1/new/control.v C:/Users/12321/Desktop/sources_1/new/play_snake_game.v C:/Users/12321/Desktop/sources_1/new/VGA_top.v}
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Mon Dec 21 13:16:24 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+export_ip_user_files -of_objects  [get_files C:/Users/12321/Desktop/draw_top.v] -no_script -reset -force -quiet
+remove_files  C:/Users/12321/Desktop/draw_top.v
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+CRITICAL WARNING: [HDL 9-806] Syntax error near "480". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:40]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "else". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:46]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:48]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:56]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:59]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:61]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:62]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:63]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:64]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:65]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:66]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:67]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:68]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:69]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:70]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:76]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:78]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:79]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:80]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:81]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:82]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:83]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:84]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:85]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:86]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:87]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:93]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:95]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:96]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:97]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:98]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:99]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:100]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:101]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:102]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:103]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:104]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:110]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:112]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:113]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:114]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:115]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:116]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:117]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:118]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:119]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:120]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:121]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:127]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:129]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:130]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:131]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:132]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:133]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:134]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:135]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:136]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:137]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:138]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:144]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:146]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:147]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:148]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:149]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:150]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:151]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:152]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:153]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:154]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:155]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:161]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:163]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:164]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:165]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:166]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:167]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:168]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:169]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:170]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:171]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:172]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:178]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:180]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:181]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:182]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:183]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:184]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:185]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:186]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:187]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:188]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:189]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:195]
+[Mon Dec 21 13:30:22 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 13:31:29 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 3414 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/12321/Desktop/project_2/.Xil/Vivado-20344-LAPTOP-2METBDBE/dcp10/top.xdc]
+Finished Parsing XDC File [C:/Users/12321/Desktop/project_2/.Xil/Vivado-20344-LAPTOP-2METBDBE/dcp10/top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1856.691 ; gain = 31.762
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1856.691 ; gain = 31.762
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 1947.012 ; gain = 496.668
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'open_report' was cancelled
+reset_run impl_1
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 13:34:04 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 13:36:41 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+CRITICAL WARNING: [HDL 9-806] Syntax error near "480". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:40]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "else". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:46]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:48]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:56]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:59]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:61]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:62]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:63]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:64]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:65]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:66]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:67]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:68]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:69]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:70]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:76]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:78]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:79]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:80]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:81]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:82]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:83]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:84]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:85]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:86]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:87]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:93]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:95]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:96]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:97]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:98]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:99]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:100]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:101]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:102]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:103]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:104]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:110]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:112]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:113]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:114]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:115]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:116]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:117]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:118]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:119]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:120]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:121]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:127]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:129]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:130]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:131]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:132]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:133]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:134]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:135]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:136]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:137]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:138]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:144]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:146]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:147]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:148]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:149]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:150]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:151]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:152]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:153]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:154]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:155]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:161]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:163]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:164]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:165]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:166]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:167]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:168]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:169]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:170]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:171]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:172]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:178]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:180]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:181]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:182]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:183]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:184]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:185]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:186]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:187]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:188]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:189]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [C:/Users/12321/Desktop/sources_1/new/seg_play.v:195]
+[Mon Dec 21 13:46:12 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 13:47:30 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 13:49:44 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 13:59:33 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 14:03:00 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 14:08:05 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 14:09:16 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 14:11:35 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 14:19:46 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+close_hw
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 14:20:56 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 14:24:32 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 14:27:57 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 14:29:38 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 14:33:19 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 14:37:01 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 14:39:01 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 14:42:29 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 15:09:34 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 15:12:13 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 15:14:40 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+close_hw
+close [ open C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/VGA_top1.v w ]
+add_files C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/VGA_top1.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 16:07:36 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 16:08:47 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 16:11:03 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 16:29:21 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 16:31:17 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 16:32:54 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 16:34:17 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci'
+refresh_design
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Netlist 29-17] Analyzing 3519 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Common 17-344] 'refresh_design' was cancelled
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 16:36:55 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 16:41:56 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 16:43:17 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Mon Dec 21 16:46:01 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close_hw
+ERROR: [Vivado 12-106] *** Exception: java.lang.NullPointerException (See C:/Users/12321/Desktop/project_2/vivado_pid20344.debug)
+ERROR: [Vivado 12-106] *** Exception: java.lang.NullPointerException (See C:/Users/12321/Desktop/project_2/vivado_pid20344.debug)
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 17:03:39 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 17:04:57 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 17:07:18 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 17:13:44 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 17:14:43 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 17:16:36 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+reset_run impl_1
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 17:18:04 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+reset_run impl_1
+launch_runs impl_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 17:19:13 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/blk_mem_gen_0_1.xci' is already up-to-date
+[Mon Dec 21 17:21:34 2020] Launched synth_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/runme.log
+[Mon Dec 21 17:21:34 2020] Launched impl_1...
+Run output will be captured here: C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/12321/Desktop/project_2/project_2.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 21 17:31:15 2020...

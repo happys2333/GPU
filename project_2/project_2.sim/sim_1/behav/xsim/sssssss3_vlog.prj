@@ -1,0 +1,28 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_2.srcs/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v" \
+"../../../../project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/sim/blk_mem_gen_0_1.v" \
+"../../../../project_2.srcs/sources_1/new/LEDOUT.v" \
+"../../../../project_2.srcs/sources_1/new/Line.v" \
+"../../../../project_2.srcs/sources_1/new/Triangle.v" \
+"../../../../../sources_1/new/VGA_top.v" \
+"../../../../../sources_1/new/apple.v" \
+"../../../../project_2.srcs/sources_1/new/circular.v" \
+"../../../../../sources_1/new/control.v" \
+"../../../../../sources_1/new/play_snake_game.v" \
+"../../../../project_2.srcs/sources_1/new/point.v" \
+"../../../../project_2.srcs/sources_1/new/rectangular.v" \
+"../../../../project_2.srcs/sources_1/new/ribbon.v" \
+"../../../../../sources_1/new/seg_play.v" \
+"../../../../../sources_1/new/snake.v" \
+"../../../../project_2.srcs/sources_1/new/top.v" \
+"../../../../project_2.srcs/sources_1/new/uart.v" \
+"../../../../project_2.srcs/sources_1/new/uart2.v" \
+"../../../../project_2.srcs/sources_1/new/vga.v" \
+"../../../../project_2.srcs/sim_1/new/sssssss3.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

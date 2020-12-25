@@ -1,0 +1,167 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Dec 22 22:11:28 2020
+# Process ID: 15264
+# Current directory: C:/Users/12321/Desktop/project_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5844 C:\Users\12321\Desktop\project_2\project_2.xpr
+# Log file: C:/Users/12321/Desktop/project_2/vivado.log
+# Journal file: C:/Users/12321/Desktop/project_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/12321/Desktop/project_2/project_2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/sdad/Vivado/2017.4/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12321/Desktop/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/sdad/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/12321/Desktop/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'sssssss3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12321/Desktop/project_2/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sssssss3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/ip/blk_mem_gen_0_1_1/sim/blk_mem_gen_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/LEDOUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LEDOUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Line.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Line
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Triangle.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Triangle
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/sources_1/new/VGA_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_use
+INFO: [VRFC 10-311] analyzing module VGA_use
+INFO: [VRFC 10-311] analyzing module VGA_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/sources_1/new/apple.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apple
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/circular.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module circular
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/sources_1/new/control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Keyboard
+INFO: [VRFC 10-311] analyzing module Game_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/sources_1/new/play_snake_game.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module play_snake_game
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/point.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module point
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/rectangular.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rectangular
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/ribbon.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ribbon
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/sources_1/new/seg_play.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_play
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/sources_1/new/snake.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module snake
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12321/Desktop/project_2/project_2.srcs/sim_1/new/sssssss3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sssssss3
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12321/Desktop/project_2/project_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: F:/sdad/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 853733d7b1fc4c64bb690bd45372a7aa --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot sssssss3_behav xil_defaultlib.sssssss3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 1 for port choose [C:/Users/12321/Desktop/project_2/project_2.srcs/sim_1/new/sssssss3.v:36]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port wea [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:24]
+WARNING: [VRFC 10-278] actual bit length 19 differs from formal bit length 4 for port addra [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:25]
+WARNING: [VRFC 10-278] actual bit length 19 differs from formal bit length 4 for port addrb [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:28]
+WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2419]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ribbon
+Compiling module xil_defaultlib.vga
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_axi_regs_fwd_v8_4(C_DATA...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.blk_mem_gen_0_1
+Compiling module xil_defaultlib.Triangle
+Compiling module xil_defaultlib.point
+Compiling module xil_defaultlib.Line
+Compiling module xil_defaultlib.circular
+Compiling module xil_defaultlib.rectangular
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.blk_mem_gen_1
+Compiling module xil_defaultlib.uart2_default
+Compiling module xil_defaultlib.uart_default
+Compiling module xil_defaultlib.LEDOUT
+Compiling module xil_defaultlib.Game_Control
+Compiling module xil_defaultlib.apple
+Compiling module xil_defaultlib.snake
+Compiling module xil_defaultlib.clk_use
+Compiling module xil_defaultlib.VGA_use
+Compiling module xil_defaultlib.VGA_top
+Compiling module xil_defaultlib.Keyboard
+Compiling module xil_defaultlib.seg_play
+Compiling module xil_defaultlib.play_snake_game
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.sssssss3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sssssss3_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/12321/Desktop/project_2/project_2.sim/sim_1/behav/xsim/xsim.dir/sssssss3_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Dec 22 22:11:58 2020...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12321/Desktop/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "sssssss3_behav -key {Behavioral:sim_1:Functional:sssssss3} -tclbatch {sssssss3.tcl} -view {C:/Users/12321/Desktop/project_2/ssss2_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+open_wave_config C:/Users/12321/Desktop/project_2/ssss2_behav.wcfg
+source sssssss3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 500000ns
+Block Memory Generator module sssssss3.ut.ip.u_ip_simple_ram0.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module sssssss3.ut.ip.ip.u_ip_simple_ram.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'sssssss3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 500000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 884.352 ; gain = 22.805
+save_wave_config {C:/Users/12321/Desktop/project_2/ssss2_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 22 22:15:06 2020...

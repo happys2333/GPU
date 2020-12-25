@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Dec 22 22:11:28 2020
+# Process ID: 15264
+# Current directory: C:/Users/12321/Desktop/project_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5844 C:\Users\12321\Desktop\project_2\project_2.xpr
+# Log file: C:/Users/12321/Desktop/project_2/vivado.log
+# Journal file: C:/Users/12321/Desktop/project_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/12321/Desktop/project_2/project_2.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/12321/Desktop/project_2/ssss2_behav.wcfg
+source sssssss3.tcl
+save_wave_config {C:/Users/12321/Desktop/project_2/ssss2_behav.wcfg}
+close_sim

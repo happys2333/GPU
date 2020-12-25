@@ -1,0 +1,1386 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Dec 21 21:56:27 2020
+# Process ID: 23436
+# Current directory: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/top.vds
+# Journal file: C:/Users/12321/Desktop/project_2/project_2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tfgg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14656 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 341.863 ; gain = 101.324
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-638] synthesizing module 'ribbon' [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/ribbon.v:45]
+INFO: [Synth 8-256] done synthesizing module 'ribbon' (1#1) [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/ribbon.v:45]
+INFO: [Synth 8-638] synthesizing module 'vga' [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:44]
+INFO: [Synth 8-256] done synthesizing module 'vga' (2#1) [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:44]
+INFO: [Synth 8-638] synthesizing module 'uart' [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart.v:23]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter UART_BPS bound to: 1000000 - type: integer 
+	Parameter PERIOD bound to: 100 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0_1' [C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/.Xil/Vivado-23436-LAPTOP-2METBDBE/realtime/blk_mem_gen_0_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0_1' (3#1) [C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/.Xil/Vivado-23436-LAPTOP-2METBDBE/realtime/blk_mem_gen_0_1_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'Triangle' [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Triangle.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Triangle' (4#1) [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Triangle.v:23]
+INFO: [Synth 8-638] synthesizing module 'point' [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/point.v:23]
+WARNING: [Synth 8-5788] Register wr_addr2_reg in module point is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/point.v:56]
+WARNING: [Synth 8-5788] Register wr_data2_reg in module point is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/point.v:57]
+INFO: [Synth 8-256] done synthesizing module 'point' (5#1) [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/point.v:23]
+INFO: [Synth 8-638] synthesizing module 'Line' [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Line.v:23]
+WARNING: [Synth 8-5788] Register wr_data3_reg in module Line is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Line.v:62]
+WARNING: [Synth 8-5788] Register wr_addr3_reg in module Line is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Line.v:63]
+INFO: [Synth 8-256] done synthesizing module 'Line' (6#1) [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Line.v:23]
+INFO: [Synth 8-638] synthesizing module 'circular' [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/circular.v:23]
+WARNING: [Synth 8-5788] Register wr_addr5_reg in module circular is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/circular.v:57]
+WARNING: [Synth 8-5788] Register wr_data5_reg in module circular is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/circular.v:58]
+INFO: [Synth 8-256] done synthesizing module 'circular' (7#1) [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/circular.v:23]
+INFO: [Synth 8-638] synthesizing module 'rectangular' [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/rectangular.v:23]
+INFO: [Synth 8-256] done synthesizing module 'rectangular' (8#1) [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/rectangular.v:23]
+INFO: [Synth 8-638] synthesizing module 'uart2' [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:1]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter UART_BPS bound to: 1000000 - type: integer 
+	Parameter PERIOD bound to: 100 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/.Xil/Vivado-23436-LAPTOP-2METBDBE/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_1' (9#1) [C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/.Xil/Vivado-23436-LAPTOP-2METBDBE/realtime/blk_mem_gen_1_stub.v:6]
+WARNING: [Synth 8-689] width (19) of port connection 'addra' does not match port width (4) of module 'blk_mem_gen_1' [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:25]
+WARNING: [Synth 8-689] width (19) of port connection 'addrb' does not match port width (4) of module 'blk_mem_gen_1' [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:28]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:89]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:114]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:139]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:164]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:188]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:211]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:233]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:78]
+WARNING: [Synth 8-5788] Register functionChoice_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:44]
+WARNING: [Synth 8-5788] Register functionChoice2_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:45]
+WARNING: [Synth 8-5788] Register number_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:46]
+WARNING: [Synth 8-5788] Register x1_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:81]
+WARNING: [Synth 8-5788] Register y1_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:85]
+WARNING: [Synth 8-5788] Register r_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:92]
+WARNING: [Synth 8-5788] Register x2_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:96]
+WARNING: [Synth 8-5788] Register radius_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:104]
+WARNING: [Synth 8-5788] Register g_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:117]
+WARNING: [Synth 8-5788] Register y2_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:121]
+WARNING: [Synth 8-5788] Register b_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:142]
+WARNING: [Synth 8-5788] Register x3_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:150]
+WARNING: [Synth 8-5788] Register y3_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:174]
+WARNING: [Synth 8-5788] Register x4_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:198]
+WARNING: [Synth 8-5788] Register y4_reg in module uart2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:220]
+INFO: [Synth 8-256] done synthesizing module 'uart2' (10#1) [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart.v:154]
+WARNING: [Synth 8-5788] Register isFirst_reg in module uart is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart.v:98]
+INFO: [Synth 8-256] done synthesizing module 'uart' (11#1) [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart.v:23]
+INFO: [Synth 8-638] synthesizing module 'LEDOUT' [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/LEDOUT.v:23]
+	Parameter zero bound to: 7'b1000000 
+	Parameter eight bound to: 7'b0000000 
+	Parameter six bound to: 7'b0000010 
+	Parameter four bound to: 7'b0011001 
+WARNING: [Synth 8-5788] Register clk_s_reg in module LEDOUT is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/LEDOUT.v:44]
+INFO: [Synth 8-256] done synthesizing module 'LEDOUT' (12#1) [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/LEDOUT.v:23]
+INFO: [Synth 8-638] synthesizing module 'play_snake_game' [C:/Users/12321/Desktop/sources_1/new/play_snake_game.v:23]
+INFO: [Synth 8-638] synthesizing module 'Game_Control' [C:/Users/12321/Desktop/sources_1/new/control.v:74]
+	Parameter RESTART bound to: 2'b00 
+	Parameter START bound to: 2'b01 
+	Parameter DIE bound to: 2'b11 
+	Parameter PLAY bound to: 2'b10 
+INFO: [Synth 8-256] done synthesizing module 'Game_Control' (13#1) [C:/Users/12321/Desktop/sources_1/new/control.v:74]
+INFO: [Synth 8-638] synthesizing module 'apple' [C:/Users/12321/Desktop/sources_1/new/apple.v:2]
+INFO: [Synth 8-256] done synthesizing module 'apple' (14#1) [C:/Users/12321/Desktop/sources_1/new/apple.v:2]
+INFO: [Synth 8-638] synthesizing module 'snake' [C:/Users/12321/Desktop/sources_1/new/snake.v:2]
+	Parameter NONE bound to: 2'b00 
+	Parameter HEAD bound to: 2'b01 
+	Parameter BODY bound to: 2'b10 
+	Parameter WALL bound to: 2'b11 
+	Parameter UP bound to: 2'b00 
+	Parameter DOWN bound to: 2'b01 
+	Parameter LEFT bound to: 2'b10 
+	Parameter RIGHT bound to: 2'b11 
+	Parameter RESTART bound to: 2'b00 
+	Parameter PLAY bound to: 2'b10 
+WARNING: [Synth 8-567] referenced signal 'cube_x' should be on the sensitivity list [C:/Users/12321/Desktop/sources_1/new/snake.v:372]
+WARNING: [Synth 8-567] referenced signal 'cube_y' should be on the sensitivity list [C:/Users/12321/Desktop/sources_1/new/snake.v:372]
+WARNING: [Synth 8-567] referenced signal 'is_exist' should be on the sensitivity list [C:/Users/12321/Desktop/sources_1/new/snake.v:372]
+WARNING: [Synth 8-567] referenced signal 'die_flash' should be on the sensitivity list [C:/Users/12321/Desktop/sources_1/new/snake.v:372]
+INFO: [Synth 8-256] done synthesizing module 'snake' (15#1) [C:/Users/12321/Desktop/sources_1/new/snake.v:2]
+INFO: [Synth 8-638] synthesizing module 'VGA_top' [C:/Users/12321/Desktop/sources_1/new/VGA_top.v:135]
+INFO: [Synth 8-638] synthesizing module 'clk_use' [C:/Users/12321/Desktop/sources_1/new/VGA_top.v:22]
+INFO: [Synth 8-256] done synthesizing module 'clk_use' (16#1) [C:/Users/12321/Desktop/sources_1/new/VGA_top.v:22]
+INFO: [Synth 8-638] synthesizing module 'VGA_use' [C:/Users/12321/Desktop/sources_1/new/VGA_top.v:43]
+	Parameter NONE bound to: 2'b00 
+	Parameter HEAD bound to: 2'b01 
+	Parameter BODY bound to: 2'b10 
+	Parameter WALL bound to: 2'b11 
+	Parameter head_c bound to: 12'b000011110000 
+	Parameter body_c bound to: 12'b000011111111 
+WARNING: [Synth 8-6014] Unused sequential element lox_reg was removed.  [C:/Users/12321/Desktop/sources_1/new/VGA_top.v:109]
+WARNING: [Synth 8-6014] Unused sequential element loy_reg was removed.  [C:/Users/12321/Desktop/sources_1/new/VGA_top.v:110]
+WARNING: [Synth 8-5788] Register snake_x_reg in module VGA_use is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/sources_1/new/VGA_top.v:81]
+WARNING: [Synth 8-5788] Register snake_y_reg in module VGA_use is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/sources_1/new/VGA_top.v:82]
+WARNING: [Synth 8-5788] Register color_out_reg in module VGA_use is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/12321/Desktop/sources_1/new/VGA_top.v:115]
+INFO: [Synth 8-256] done synthesizing module 'VGA_use' (17#1) [C:/Users/12321/Desktop/sources_1/new/VGA_top.v:43]
+INFO: [Synth 8-256] done synthesizing module 'VGA_top' (18#1) [C:/Users/12321/Desktop/sources_1/new/VGA_top.v:135]
+INFO: [Synth 8-638] synthesizing module 'Keyboard' [C:/Users/12321/Desktop/sources_1/new/control.v:8]
+INFO: [Synth 8-256] done synthesizing module 'Keyboard' (19#1) [C:/Users/12321/Desktop/sources_1/new/control.v:8]
+INFO: [Synth 8-638] synthesizing module 'seg_play' [C:/Users/12321/Desktop/sources_1/new/seg_play.v:24]
+	Parameter RE bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'seg_play' (20#1) [C:/Users/12321/Desktop/sources_1/new/seg_play.v:24]
+INFO: [Synth 8-256] done synthesizing module 'play_snake_game' (21#1) [C:/Users/12321/Desktop/sources_1/new/play_snake_game.v:23]
+INFO: [Synth 8-256] done synthesizing module 'top' (22#1) [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-3331] design uart2 has unconnected port functional[3]
+WARNING: [Synth 8-3331] design uart2 has unconnected port functional[2]
+WARNING: [Synth 8-3331] design uart2 has unconnected port functional[1]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[18]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[17]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[16]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[15]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[14]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[13]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[12]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[11]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[10]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[9]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[8]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[7]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[6]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[5]
+WARNING: [Synth 8-3331] design uart2 has unconnected port rd_addr[4]
+WARNING: [Synth 8-3331] design Line has unconnected port active
+WARNING: [Synth 8-3331] design point has unconnected port active
+WARNING: [Synth 8-3331] design ribbon has unconnected port choose
+WARNING: [Synth 8-3331] design ribbon has unconnected port v_cnt[11]
+WARNING: [Synth 8-3331] design ribbon has unconnected port v_cnt[10]
+WARNING: [Synth 8-3331] design ribbon has unconnected port v_cnt[9]
+WARNING: [Synth 8-3331] design ribbon has unconnected port v_cnt[8]
+WARNING: [Synth 8-3331] design ribbon has unconnected port v_cnt[7]
+WARNING: [Synth 8-3331] design ribbon has unconnected port v_cnt[6]
+WARNING: [Synth 8-3331] design ribbon has unconnected port v_cnt[5]
+WARNING: [Synth 8-3331] design ribbon has unconnected port v_cnt[4]
+WARNING: [Synth 8-3331] design ribbon has unconnected port v_cnt[3]
+WARNING: [Synth 8-3331] design ribbon has unconnected port v_cnt[2]
+WARNING: [Synth 8-3331] design ribbon has unconnected port v_cnt[1]
+WARNING: [Synth 8-3331] design ribbon has unconnected port v_cnt[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 417.688 ; gain = 177.148
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 417.688 ; gain = 177.148
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/.Xil/Vivado-23436-LAPTOP-2METBDBE/dcp2/blk_mem_gen_0_in_context.xdc] for cell 'ip/u_ip_simple_ram0'
+Finished Parsing XDC File [C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/.Xil/Vivado-23436-LAPTOP-2METBDBE/dcp2/blk_mem_gen_0_in_context.xdc] for cell 'ip/u_ip_simple_ram0'
+Parsing XDC File [C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/.Xil/Vivado-23436-LAPTOP-2METBDBE/dcp3/blk_mem_gen_1_in_context.xdc] for cell 'ip/ip/u_ip_simple_ram'
+Finished Parsing XDC File [C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/.Xil/Vivado-23436-LAPTOP-2METBDBE/dcp3/blk_mem_gen_1_in_context.xdc] for cell 'ip/ip/u_ip_simple_ram'
+Parsing XDC File [C:/Users/12321/Desktop/project_2/project_2.srcs/constrs_1/new/con1.xdc]
+Finished Parsing XDC File [C:/Users/12321/Desktop/project_2/project_2.srcs/constrs_1/new/con1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/12321/Desktop/project_2/project_2.srcs/constrs_1/new/con1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 770.875 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 770.875 ; gain = 530.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 770.875 ; gain = 530.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for ip/ip/u_ip_simple_ram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ip/u_ip_simple_ram0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 770.875 ; gain = 530.336
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "R_v_cnt" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element R_v_cnt_reg was removed.  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:128]
+INFO: [Synth 8-5544] ROM "C_V_BACK_PORCH" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "C_V_BACK_PORCH" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "x1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "y1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rx_data" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element cnt1_reg was removed.  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:376]
+INFO: [Synth 8-5544] ROM "fir" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "rx_data" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element cnt1_reg was removed.  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart.v:231]
+INFO: [Synth 8-5545] ROM "clk_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "add" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element random_num_reg was removed.  [C:/Users/12321/Desktop/sources_1/new/apple.v:18]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/12321/Desktop/sources_1/new/snake.v:244]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/12321/Desktop/sources_1/new/snake.v:244]
+INFO: [Synth 8-5546] ROM "cube_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cube_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cube_y" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cube_y" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "hit_wall" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "hit_wall" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hit_wall" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hit_wall" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hit_wall" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "color_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "color_out0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "clk_con" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "left_key_last" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-327] inferring latch for variable 'snake_reg' [C:/Users/12321/Desktop/sources_1/new/snake.v:375]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 770.875 ; gain = 530.336
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |rectangular__GB0 |           1|     21071|
+|2     |rectangular__GB1 |           1|      4812|
+|3     |uart__GCB0       |           1|     20875|
+|4     |uart__GCB1       |           1|     13623|
+|5     |top__GC0         |           1|     11819|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 18    
+	   2 Input     32 Bit       Adders := 36    
+	   5 Input     32 Bit       Adders := 4     
+	   4 Input     32 Bit       Adders := 4     
+	   2 Input     20 Bit       Adders := 1     
+	   3 Input     19 Bit       Adders := 4     
+	   2 Input     19 Bit       Adders := 5     
+	   2 Input     16 Bit       Adders := 2     
+	   3 Input     12 Bit       Adders := 17    
+	   2 Input     12 Bit       Adders := 4     
+	   2 Input     11 Bit       Adders := 5     
+	   3 Input     11 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 9     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 7     
+	               20 Bit    Registers := 1     
+	               19 Bit    Registers := 7     
+	               16 Bit    Registers := 3     
+	               12 Bit    Registers := 18    
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 34    
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 35    
++---Multipliers : 
+	                10x32  Multipliers := 3     
+	                32x32  Multipliers := 12    
+	                12x32  Multipliers := 8     
+	                 3x32  Multipliers := 2     
+	                 2x32  Multipliers := 1     
+	                11x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 48    
+	   4 Input     32 Bit        Muxes := 1     
+	   4 Input     20 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	   6 Input     19 Bit        Muxes := 2     
+	   2 Input     19 Bit        Muxes := 22    
+	   4 Input     19 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 10    
+	   6 Input     12 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 14    
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 13    
+	   7 Input      8 Bit        Muxes := 1     
+	   6 Input      8 Bit        Muxes := 1     
+	   9 Input      8 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 5     
+	  11 Input      7 Bit        Muxes := 7     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 34    
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 15    
+	   6 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 10    
+	   5 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   6 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 125   
+	  12 Input      1 Bit        Muxes := 11    
+	  10 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 12    
+	   7 Input      1 Bit        Muxes := 13    
+	   8 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 7     
+	   5 Input      1 Bit        Muxes := 5     
+	  11 Input      1 Bit        Muxes := 9     
+	   9 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   3 Input     11 Bit       Adders := 1     
++---Registers : 
+	               19 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 6     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 9     
+Module rectangular 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 7     
+	   2 Input     32 Bit       Adders := 13    
+	   5 Input     32 Bit       Adders := 2     
+	   4 Input     32 Bit       Adders := 2     
+	   3 Input     19 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 9     
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               19 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
++---Multipliers : 
+	                10x32  Multipliers := 1     
+	                32x32  Multipliers := 4     
+	                12x32  Multipliers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 12    
+	   6 Input     19 Bit        Muxes := 1     
+	   6 Input     12 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
+Module Triangle 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 10    
+	   5 Input     32 Bit       Adders := 2     
+	   4 Input     32 Bit       Adders := 2     
+	   3 Input     19 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 7     
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               19 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
++---Multipliers : 
+	                10x32  Multipliers := 1     
+	                32x32  Multipliers := 3     
+	                12x32  Multipliers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	   6 Input     19 Bit        Muxes := 1     
+	   6 Input     12 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module uart2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 10    
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 10    
+	   5 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 40    
+	  12 Input      1 Bit        Muxes := 10    
+	   7 Input      1 Bit        Muxes := 12    
+	   6 Input      1 Bit        Muxes := 11    
+	   8 Input      1 Bit        Muxes := 1     
+Module circular 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 3     
+	   3 Input     19 Bit       Adders := 1     
++---Registers : 
+	               19 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
++---Multipliers : 
+	                 3x32  Multipliers := 2     
+	                32x32  Multipliers := 4     
+	                 2x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module Line 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   3 Input     32 Bit       Adders := 5     
+	   3 Input     19 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   3 Input     11 Bit       Adders := 1     
++---Registers : 
+	               19 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
++---Multipliers : 
+	                10x32  Multipliers := 1     
+	                11x32  Multipliers := 1     
+	                32x32  Multipliers := 1     
+	                12x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     19 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module point 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     12 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   3 Input     11 Bit       Adders := 1     
++---Registers : 
+	               19 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module uart 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               19 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 4     
+	   4 Input     19 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 4     
+	   6 Input     12 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+	   6 Input      1 Bit        Muxes := 1     
+Module ribbon 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+Module vga 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   3 Input     11 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module LEDOUT 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 1     
+	   7 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 2     
+Module Game_Control 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+	  11 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+Module apple 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module snake 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 32    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 32    
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   6 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 29    
+	   5 Input      1 Bit        Muxes := 3     
+Module clk_use 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module VGA_use 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 3     
++---Registers : 
+	               20 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     20 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 3     
+Module Keyboard 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module seg_play 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 8     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 18    
+	   2 Input     19 Bit        Muxes := 2     
+	   9 Input      8 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 7     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	  11 Input      1 Bit        Muxes := 8     
+	   9 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/rectangular.v:71]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/rectangular.v:160]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/rectangular.v:70]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/rectangular.v:149]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/rectangular.v:69]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/rectangular.v:138]
+DSP Report: Generating DSP k43, operation Mode is: A*(B:0x3e8).
+DSP Report: operator k43 is absorbed into DSP k43.
+DSP Report: Generating DSP wr_addr43, operation Mode is: A*(B:0x280).
+DSP Report: operator wr_addr43 is absorbed into DSP wr_addr43.
+DSP Report: Generating DSP wr_addr40, operation Mode is: PCIN+(A:0x0):B+(C:0xffffffffff70).
+DSP Report: operator wr_addr40 is absorbed into DSP wr_addr40.
+DSP Report: Generating DSP b30, operation Mode is: A*(B:0x3e8).
+DSP Report: operator b30 is absorbed into DSP b30.
+DSP Report: Generating DSP k33, operation Mode is: A*(B:0x3e8).
+DSP Report: operator k33 is absorbed into DSP k33.
+DSP Report: Generating DSP wr_addr47, operation Mode is: A*B.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: Generating DSP wr_addr47, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: Generating DSP wr_addr47, operation Mode is: A*B.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: Generating DSP wr_addr47, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: Generating DSP b30, operation Mode is: A*B.
+DSP Report: operator b30 is absorbed into DSP b30.
+DSP Report: operator b30 is absorbed into DSP b30.
+DSP Report: Generating DSP b30, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator b30 is absorbed into DSP b30.
+DSP Report: operator b30 is absorbed into DSP b30.
+DSP Report: Generating DSP wr_addr46, operation Mode is: PCIN+A:B+C.
+DSP Report: operator wr_addr46 is absorbed into DSP wr_addr46.
+DSP Report: Generating DSP k23, operation Mode is: A*(B:0x3e8).
+DSP Report: operator k23 is absorbed into DSP k23.
+DSP Report: Generating DSP b20, operation Mode is: A*B.
+DSP Report: operator b20 is absorbed into DSP b20.
+DSP Report: operator b20 is absorbed into DSP b20.
+DSP Report: Generating DSP b20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator b20 is absorbed into DSP b20.
+DSP Report: operator b20 is absorbed into DSP b20.
+DSP Report: Generating DSP b10, operation Mode is: A*(B:0x3e8).
+DSP Report: operator b10 is absorbed into DSP b10.
+DSP Report: Generating DSP wr_addr47, operation Mode is: A*B.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: Generating DSP wr_addr47, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: Generating DSP wr_addr47, operation Mode is: A*B.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: Generating DSP wr_addr47, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: Generating DSP k13, operation Mode is: A*(B:0x3e8).
+DSP Report: operator k13 is absorbed into DSP k13.
+DSP Report: Generating DSP b10, operation Mode is: A*B.
+DSP Report: operator b10 is absorbed into DSP b10.
+DSP Report: operator b10 is absorbed into DSP b10.
+DSP Report: Generating DSP b10, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator b10 is absorbed into DSP b10.
+DSP Report: operator b10 is absorbed into DSP b10.
+DSP Report: Generating DSP wr_addr47, operation Mode is: A*B.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: Generating DSP wr_addr47, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: Generating DSP wr_addr47, operation Mode is: A*B.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: Generating DSP wr_addr47, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+DSP Report: operator wr_addr47 is absorbed into DSP wr_addr47.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/rectangular.v:72]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/rectangular.v:171]
+DSP Report: Generating DSP b40, operation Mode is: A*(B:0x3e8).
+DSP Report: operator b40 is absorbed into DSP b40.
+DSP Report: Generating DSP wr_addr46, operation Mode is: A*B.
+DSP Report: operator wr_addr46 is absorbed into DSP wr_addr46.
+DSP Report: operator wr_addr46 is absorbed into DSP wr_addr46.
+DSP Report: Generating DSP wr_addr46, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_addr46 is absorbed into DSP wr_addr46.
+DSP Report: operator wr_addr46 is absorbed into DSP wr_addr46.
+DSP Report: Generating DSP wr_addr46, operation Mode is: A*B.
+DSP Report: operator wr_addr46 is absorbed into DSP wr_addr46.
+DSP Report: operator wr_addr46 is absorbed into DSP wr_addr46.
+DSP Report: Generating DSP wr_addr46, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_addr46 is absorbed into DSP wr_addr46.
+DSP Report: operator wr_addr46 is absorbed into DSP wr_addr46.
+DSP Report: Generating DSP b40, operation Mode is: A*B.
+DSP Report: operator b40 is absorbed into DSP b40.
+DSP Report: operator b40 is absorbed into DSP b40.
+DSP Report: Generating DSP b40, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator b40 is absorbed into DSP b40.
+DSP Report: operator b40 is absorbed into DSP b40.
+DSP Report: Generating DSP wr_addr45, operation Mode is: PCIN+A:B+C.
+DSP Report: operator wr_addr45 is absorbed into DSP wr_addr45.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Triangle.v:68]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Triangle.v:150]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Triangle.v:67]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Triangle.v:139]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Triangle.v:66]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Triangle.v:128]
+DSP Report: Generating DSP b30, operation Mode is: A*(B:0x3e8).
+DSP Report: operator b30 is absorbed into DSP b30.
+DSP Report: Generating DSP k33, operation Mode is: A*(B:0x3e8).
+DSP Report: operator k33 is absorbed into DSP k33.
+DSP Report: Generating DSP wr_addr66, operation Mode is: A*B.
+DSP Report: operator wr_addr66 is absorbed into DSP wr_addr66.
+DSP Report: operator wr_addr66 is absorbed into DSP wr_addr66.
+DSP Report: Generating DSP wr_addr66, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_addr66 is absorbed into DSP wr_addr66.
+DSP Report: operator wr_addr66 is absorbed into DSP wr_addr66.
+DSP Report: Generating DSP wr_addr66, operation Mode is: A*B.
+DSP Report: operator wr_addr66 is absorbed into DSP wr_addr66.
+DSP Report: operator wr_addr66 is absorbed into DSP wr_addr66.
+DSP Report: Generating DSP wr_addr66, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_addr66 is absorbed into DSP wr_addr66.
+DSP Report: operator wr_addr66 is absorbed into DSP wr_addr66.
+DSP Report: Generating DSP b30, operation Mode is: A*B.
+DSP Report: operator b30 is absorbed into DSP b30.
+DSP Report: operator b30 is absorbed into DSP b30.
+DSP Report: Generating DSP b30, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator b30 is absorbed into DSP b30.
+DSP Report: operator b30 is absorbed into DSP b30.
+DSP Report: Generating DSP wr_addr65, operation Mode is: PCIN+A:B+C.
+DSP Report: operator wr_addr65 is absorbed into DSP wr_addr65.
+DSP Report: Generating DSP k23, operation Mode is: A*(B:0x3e8).
+DSP Report: operator k23 is absorbed into DSP k23.
+DSP Report: Generating DSP b20, operation Mode is: A*B.
+DSP Report: operator b20 is absorbed into DSP b20.
+DSP Report: operator b20 is absorbed into DSP b20.
+DSP Report: Generating DSP b20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator b20 is absorbed into DSP b20.
+DSP Report: operator b20 is absorbed into DSP b20.
+DSP Report: Generating DSP b10, operation Mode is: A*(B:0x3e8).
+DSP Report: operator b10 is absorbed into DSP b10.
+DSP Report: Generating DSP wr_addr67, operation Mode is: A*B.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: Generating DSP wr_addr67, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: Generating DSP wr_addr67, operation Mode is: A*B.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: Generating DSP wr_addr67, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: Generating DSP k13, operation Mode is: A*(B:0x3e8).
+DSP Report: operator k13 is absorbed into DSP k13.
+DSP Report: Generating DSP b10, operation Mode is: A*B.
+DSP Report: operator b10 is absorbed into DSP b10.
+DSP Report: operator b10 is absorbed into DSP b10.
+DSP Report: Generating DSP b10, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator b10 is absorbed into DSP b10.
+DSP Report: operator b10 is absorbed into DSP b10.
+DSP Report: Generating DSP wr_addr67, operation Mode is: A*B.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: Generating DSP wr_addr67, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: Generating DSP wr_addr67, operation Mode is: A*B.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: Generating DSP wr_addr67, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: operator wr_addr67 is absorbed into DSP wr_addr67.
+DSP Report: Generating DSP wr_addr63, operation Mode is: A*(B:0x280).
+DSP Report: operator wr_addr63 is absorbed into DSP wr_addr63.
+DSP Report: Generating DSP wr_addr60, operation Mode is: PCIN+(A:0x0):B+(C:0xffffffffff70).
+DSP Report: operator wr_addr60 is absorbed into DSP wr_addr60.
+WARNING: [Synth 8-6014] Unused sequential element cnt1_reg was removed.  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart.v:231]
+WARNING: [Synth 8-6014] Unused sequential element cnt1_reg was removed.  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/uart2.v:376]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Line.v:57]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/Line.v:87]
+DSP Report: Generating DSP b0, operation Mode is: A*(B:0x3e8).
+DSP Report: operator b0 is absorbed into DSP b0.
+DSP Report: Generating DSP wr_data35, operation Mode is: A*B.
+DSP Report: operator wr_data35 is absorbed into DSP wr_data35.
+DSP Report: operator wr_data35 is absorbed into DSP wr_data35.
+DSP Report: Generating DSP wr_data35, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_data35 is absorbed into DSP wr_data35.
+DSP Report: operator wr_data35 is absorbed into DSP wr_data35.
+DSP Report: Generating DSP wr_data35, operation Mode is: A*B.
+DSP Report: operator wr_data35 is absorbed into DSP wr_data35.
+DSP Report: operator wr_data35 is absorbed into DSP wr_data35.
+DSP Report: Generating DSP wr_data35, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator wr_data35 is absorbed into DSP wr_data35.
+DSP Report: operator wr_data35 is absorbed into DSP wr_data35.
+DSP Report: Generating DSP b0, operation Mode is: A*B.
+DSP Report: operator b0 is absorbed into DSP b0.
+DSP Report: operator b0 is absorbed into DSP b0.
+DSP Report: Generating DSP b0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator b0 is absorbed into DSP b0.
+DSP Report: operator b0 is absorbed into DSP b0.
+DSP Report: Generating DSP wr_data34, operation Mode is: PCIN+A:B+C.
+DSP Report: operator wr_data34 is absorbed into DSP wr_data34.
+DSP Report: Generating DSP wr_addr33, operation Mode is: A*(B:0x280).
+DSP Report: operator wr_addr33 is absorbed into DSP wr_addr33.
+DSP Report: Generating DSP wr_addr30, operation Mode is: (PCIN or 0)+((A:0x0):B or 0)+((C:0xffffffffff70) or 0).
+DSP Report: operator wr_addr30 is absorbed into DSP wr_addr30.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/circular.v:86]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/circular.v:86]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/circular.v:71]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/circular.v:71]
+DSP Report: Generating DSP Circular2/wr_addr53, operation Mode is: A*(B:0x280).
+DSP Report: operator Circular2/wr_addr53 is absorbed into DSP Circular2/wr_addr53.
+DSP Report: Generating DSP Circular2/wr_addr50, operation Mode is: (PCIN or 0)+((A:0x0):B or 0)+((C:0xffffffffff70) or 0).
+DSP Report: operator Circular2/wr_addr50 is absorbed into DSP Circular2/wr_addr50.
+DSP Report: Generating DSP point2/wr_addr20, operation Mode is: C+A*(B:0x280).
+DSP Report: operator point2/wr_addr20 is absorbed into DSP point2/wr_addr20.
+DSP Report: operator point2/wr_addr21 is absorbed into DSP point2/wr_addr20.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr51, operation Mode is: A*(B:0x31).
+DSP Report: operator Circular2/wr_addr51 is absorbed into DSP Circular2/wr_addr51.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: Generating DSP Circular2/wr_addr52, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+DSP Report: operator Circular2/wr_addr52 is absorbed into DSP Circular2/wr_addr52.
+INFO: [Synth 8-5545] ROM "clk_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "add" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element random_num_reg was removed.  [C:/Users/12321/Desktop/sources_1/new/apple.v:18]
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "V/hsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "V/color_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "clk_con" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "left_key_last" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element vg/R_v_cnt_reg was removed.  [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:128]
+INFO: [Synth 8-3886] merging instance 'ipi_3/ip/number_reg[4]' (FDE) to 'ipi_3/ip/number_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ipi_3/ip/\number_reg[5] )
+WARNING: [Synth 8-3332] Sequential element (number_reg[5]) is unused and will be removed from module uart2.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/snake1/\s/is_exist_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/snake1/\s/is_exist_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_4/snake1/\s/is_exist_reg[1] )
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/seg/clk_s_reg[27]' (FDC) to 'i_4/snake1/seg/clk_s_reg[19]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/seg/clk_s_reg[26]' (FDC) to 'i_4/snake1/seg/clk_s_reg[19]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/seg/clk_s_reg[25]' (FDC) to 'i_4/snake1/seg/clk_s_reg[19]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/seg/clk_s_reg[31]' (FDC) to 'i_4/snake1/seg/clk_s_reg[19]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/seg/clk_s_reg[30]' (FDC) to 'i_4/snake1/seg/clk_s_reg[19]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/seg/clk_s_reg[29]' (FDC) to 'i_4/snake1/seg/clk_s_reg[19]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/seg/clk_s_reg[28]' (FDC) to 'i_4/snake1/seg/clk_s_reg[19]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/seg/clk_s_reg[21]' (FDC) to 'i_4/snake1/seg/clk_s_reg[19]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/seg/clk_s_reg[19]' (FDC) to 'i_4/snake1/seg/clk_s_reg[20]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/seg/clk_s_reg[20]' (FDC) to 'i_4/snake1/seg/clk_s_reg[22]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/seg/clk_s_reg[22]' (FDC) to 'i_4/snake1/seg/clk_s_reg[23]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/seg/clk_s_reg[24]' (FDC) to 'i_4/snake1/seg/clk_s_reg[23]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/snake1/\seg/clk_s_reg[23] )
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/clk_s_reg[27]' (FDE) to 'i_4/LEDOUT2/clk_s_reg[31]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/clk_s_reg[26]' (FDE) to 'i_4/LEDOUT2/clk_s_reg[31]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/clk_s_reg[25]' (FDE) to 'i_4/LEDOUT2/clk_s_reg[31]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/clk_s_reg[31]' (FDE) to 'i_4/LEDOUT2/clk_s_reg[30]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/clk_s_reg[30]' (FDE) to 'i_4/LEDOUT2/clk_s_reg[29]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/clk_s_reg[29]' (FDE) to 'i_4/LEDOUT2/clk_s_reg[28]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/clk_s_reg[28]' (FDE) to 'i_4/LEDOUT2/clk_s_reg[24]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/clk_s_reg[20]' (FDE) to 'i_4/LEDOUT2/clk_s_reg[24]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/clk_s_reg[19]' (FDE) to 'i_4/LEDOUT2/clk_s_reg[24]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/clk_s_reg[24]' (FDE) to 'i_4/LEDOUT2/clk_s_reg[23]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/clk_s_reg[23]' (FDE) to 'i_4/LEDOUT2/clk_s_reg[22]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/clk_s_reg[22]' (FDE) to 'i_4/LEDOUT2/clk_s_reg[21]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\LEDOUT2/clk_s_reg[21] )
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/vg/V/color_out_reg[8]' (FDE) to 'i_4/snake1/vg/V/color_out_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_4/ribbon2/blue_reg[0]' (FDC) to 'i_4/ribbon2/blue_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/vg/V/color_out_reg[9]' (FDE) to 'i_4/snake1/vg/V/color_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_4/ribbon2/blue_reg[1]' (FDC) to 'i_4/ribbon2/blue_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/vg/V/color_out_reg[10]' (FDE) to 'i_4/snake1/vg/V/color_out_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_4/ribbon2/blue_reg[2]' (FDC) to 'i_4/ribbon2/blue_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/snake1/\vg/V/color_out_reg[11] )
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/vg/V/color_out_reg[4]' (FDE) to 'i_4/snake1/vg/V/color_out_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_4/ribbon2/green_reg[0]' (FDC) to 'i_4/ribbon2/green_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/vg/V/color_out_reg[5]' (FDE) to 'i_4/snake1/vg/V/color_out_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_4/ribbon2/green_reg[1]' (FDC) to 'i_4/ribbon2/green_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/vg/V/color_out_reg[6]' (FDE) to 'i_4/snake1/vg/V/color_out_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_4/ribbon2/green_reg[2]' (FDC) to 'i_4/ribbon2/green_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/vg/V/color_out_reg[0]' (FDE) to 'i_4/snake1/vg/V/color_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_4/ribbon2/red_reg[0]' (FDC) to 'i_4/ribbon2/red_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_4/snake1/vg/V/color_out_reg[1]' (FDE) to 'i_4/snake1/vg/V/color_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_4/ribbon2/red_reg[1]' (FDC) to 'i_4/ribbon2/red_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_4/ribbon2/red_reg[2]' (FDC) to 'i_4/ribbon2/red_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/led_reg[3]' (FDCE) to 'i_4/LEDOUT2/led_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/seg_out_reg[0]' (FDCE) to 'i_4/LEDOUT2/seg_out_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/seg_out_reg[2]' (FDCE) to 'i_4/LEDOUT2/seg_out_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_4/LEDOUT2/seg_out_reg[3]' (FDCE) to 'i_4/LEDOUT2/seg_out_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\LEDOUT2/seg_out_reg[5] )
+WARNING: [Synth 8-3332] Sequential element (c/restart_reg) is unused and will be removed from module play_snake_game.
+WARNING: [Synth 8-3332] Sequential element (s/is_exist_reg[2]) is unused and will be removed from module play_snake_game.
+WARNING: [Synth 8-3332] Sequential element (s/is_exist_reg[1]) is unused and will be removed from module play_snake_game.
+WARNING: [Synth 8-3332] Sequential element (s/is_exist_reg[0]) is unused and will be removed from module play_snake_game.
+WARNING: [Synth 8-3332] Sequential element (vg/V/color_out_reg[11]) is unused and will be removed from module play_snake_game.
+WARNING: [Synth 8-3332] Sequential element (seg/clk_s_reg[23]) is unused and will be removed from module play_snake_game.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 770.875 ; gain = 530.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+--------------------------------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping                                            | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------------------------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|rectangular | A*(B:0x3e8)                                            | 12     | 11     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|rectangular | A*(B:0x280)                                            | 19     | 10     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | PCIN+(A:0x0):B+(C:0xffffffffff70)                      | 30     | 12     | 9      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|rectangular | A*(B:0x3e8)                                            | 12     | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|rectangular | A*(B:0x3e8)                                            | 12     | 11     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 16     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | PCIN+A:B+C                                             | 14     | 18     | 32     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|rectangular | A*(B:0x3e8)                                            | 12     | 11     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 16     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|rectangular | A*(B:0x3e8)                                            | 12     | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|rectangular | A*(B:0x3e8)                                            | 12     | 11     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 16     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|rectangular | A*(B:0x3e8)                                            | 12     | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 16     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | PCIN+A:B+C                                             | 14     | 18     | 32     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Triangle    | A*(B:0x3e8)                                            | 12     | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | A*(B:0x3e8)                                            | 12     | 11     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | A*B                                                    | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | (PCIN>>17)+A*B                                         | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | A*B                                                    | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | (PCIN>>17)+A*B                                         | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | A*B                                                    | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | (PCIN>>17)+A*B                                         | 16     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | PCIN+A:B+C                                             | 14     | 18     | 32     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Triangle    | A*(B:0x3e8)                                            | 12     | 11     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | A*B                                                    | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | (PCIN>>17)+A*B                                         | 16     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | A*(B:0x3e8)                                            | 12     | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | A*B                                                    | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | (PCIN>>17)+A*B                                         | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | A*B                                                    | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | (PCIN>>17)+A*B                                         | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | A*(B:0x3e8)                                            | 12     | 11     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | A*B                                                    | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | (PCIN>>17)+A*B                                         | 16     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | A*B                                                    | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | (PCIN>>17)+A*B                                         | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | A*B                                                    | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | (PCIN>>17)+A*B                                         | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | A*(B:0x280)                                            | 19     | 10     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Triangle    | PCIN+(A:0x0):B+(C:0xffffffffff70)                      | 30     | 12     | 9      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Line        | A*(B:0x3e8)                                            | 12     | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Line        | A*B                                                    | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Line        | (PCIN>>17)+A*B                                         | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Line        | A*B                                                    | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Line        | (PCIN>>17)+A*B                                         | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Line        | A*B                                                    | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Line        | (PCIN>>17)+A*B                                         | 16     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Line        | PCIN+A:B+C                                             | 14     | 18     | 32     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|Line        | A*(B:0x280)                                            | 19     | 10     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Line        | (PCIN or 0)+((A:0x0):B or 0)+((C:0xffffffffff70) or 0) | 30     | 12     | 9      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|circular    | A*(B:0x280)                                            | 19     | 10     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN or 0)+((A:0x0):B or 0)+((C:0xffffffffff70) or 0) | 30     | 12     | 9      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|point       | C+A*(B:0x280)                                          | 12     | 10     | 12     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|circular    | A*B                                                    | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|circular    | A*(B:0x31)                                             | 24     | 6      | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | A*B                                                    | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B                                         | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------------------------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |rectangular__GB0 |           1|      9665|
+|2     |rectangular__GB1 |           1|      2133|
+|3     |uart__GCB0       |           1|      8835|
+|4     |uart__GCB1       |           1|      5444|
+|5     |top__GC0         |           1|      4594|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:22 ; elapsed = 00:01:26 . Memory (MB): peak = 898.086 ; gain = 657.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:01:26 . Memory (MB): peak = 898.160 ; gain = 657.621
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |rectangular__GB0 |           1|      9665|
+|2     |rectangular__GB1 |           1|      2133|
+|3     |uart__GCB0       |           1|      8835|
+|4     |uart__GCB1       |           1|      5444|
+|5     |top__GC0         |           1|      4594|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'snake1/s/add_it_reg' (FDCE) to 'snake1/seg/tempofadd_reg'
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/12321/Desktop/project_2/project_2.srcs/sources_1/new/vga.v:111]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:27 ; elapsed = 00:01:31 . Memory (MB): peak = 969.184 ; gain = 728.645
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:29 ; elapsed = 00:01:33 . Memory (MB): peak = 969.184 ; gain = 728.645
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:29 ; elapsed = 00:01:34 . Memory (MB): peak = 969.184 ; gain = 728.645
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:30 ; elapsed = 00:01:34 . Memory (MB): peak = 969.184 ; gain = 728.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:31 ; elapsed = 00:01:35 . Memory (MB): peak = 969.184 ; gain = 728.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:31 ; elapsed = 00:01:36 . Memory (MB): peak = 969.184 ; gain = 728.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:31 ; elapsed = 00:01:36 . Memory (MB): peak = 969.184 ; gain = 728.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------+----------+
+|      |BlackBox name   |Instances |
++------+----------------+----------+
+|1     |blk_mem_gen_0_1 |         1|
+|2     |blk_mem_gen_1   |         1|
++------+----------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |blk_mem_gen_0_1 |     1|
+|2     |blk_mem_gen_1   |     1|
+|3     |BUFG            |     3|
+|4     |CARRY4          |  3196|
+|5     |DSP48E1         |    48|
+|6     |DSP48E1_1       |     8|
+|7     |DSP48E1_3       |     7|
+|8     |DSP48E1_4       |    16|
+|9     |DSP48E1_5       |     1|
+|10    |LUT1            |  1021|
+|11    |LUT2            |  2292|
+|12    |LUT3            |   881|
+|13    |LUT4            |  6671|
+|14    |LUT5            |  3216|
+|15    |LUT6            |   859|
+|16    |MUXF7           |     4|
+|17    |FDCE            |   782|
+|18    |FDPE            |    23|
+|19    |FDRE            |   203|
+|20    |FDSE            |     4|
+|21    |LD              |     2|
+|22    |IBUF            |    14|
+|23    |OBUF            |    30|
++------+----------------+------+
+
+Report Instance Areas: 
++------+-----------------+----------------+------+
+|      |Instance         |Module          |Cells |
++------+-----------------+----------------+------+
+|1     |top              |                | 19305|
+|2     |  LEDOUT2        |LEDOUT          |   106|
+|3     |  ip             |uart            | 10537|
+|4     |    Circular2    |circular        |   514|
+|5     |    ip           |uart2           |  6656|
+|6     |    line2        |Line            |   268|
+|7     |    point2       |point           |    39|
+|8     |    rectangular2 |rectangular     |  1453|
+|9     |    triangle2    |Triangle        |  1423|
+|10    |  ribbon2        |ribbon          |     3|
+|11    |  snake1         |play_snake_game |  1665|
+|12    |    a            |apple           |   137|
+|13    |    c            |Game_Control    |   129|
+|14    |    keyboard     |Keyboard        |    98|
+|15    |    s            |snake           |   741|
+|16    |    seg          |seg_play        |   358|
+|17    |    vg           |VGA_top         |   202|
+|18    |      V          |VGA_use         |   198|
+|19    |      c          |clk_use         |     4|
+|20    |  vg             |vga             |   790|
++------+-----------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:31 ; elapsed = 00:01:36 . Memory (MB): peak = 969.184 ; gain = 728.645
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:13 ; elapsed = 00:01:26 . Memory (MB): peak = 969.184 ; gain = 375.457
+Synthesis Optimization Complete : Time (s): cpu = 00:01:32 ; elapsed = 00:01:36 . Memory (MB): peak = 969.184 ; gain = 728.645
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 3296 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  LD => LDCE: 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+199 Infos, 83 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:39 ; elapsed = 00:01:45 . Memory (MB): peak = 969.184 ; gain = 738.996
+INFO: [Common 17-1381] The checkpoint 'C:/Users/12321/Desktop/project_2/project_2.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.246 . Memory (MB): peak = 969.184 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 21 21:58:24 2020...
