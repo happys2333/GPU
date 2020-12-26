@@ -1,5 +1,6 @@
 # VGA Verilog实现
 ### 南方科技大学 数字逻辑project-VGA实现
+项目开源于:https://github.com/happys2333/GPU
 ![license](https://img.shields.io/badge/license-MIT-green)
 ![language](https://img.shields.io/badge/%E8%AF%AD%E8%A8%80-Verilog-green)
 ![author](https://img.shields.io/badge/%E4%BD%9C%E8%80%85-%E9%B2%81%E6%98%8E%E6%B5%B7%20%E9%9F%A9%E6%A2%93%E8%BE%B0%20%E5%BC%A0%E5%8D%9A%E6%96%87-orange)
