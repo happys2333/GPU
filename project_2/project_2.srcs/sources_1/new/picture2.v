@@ -39,7 +39,7 @@ module picture2(
 
 //--------------end of module define--------------
     wire                                    tt                  ;
-    reg                 [18:0]              number              
+    reg                 [18:0]              number              ;
     reg                 [18:0]              adress              ;
     wire                [11:0]              signal              ;
     wire                [11:0]              h_cnt               ;
@@ -52,13 +52,13 @@ uart ip(clk,rst,number,adress,signal, uart_rx,tt);
                         C_H_ACTIVE_TIME                    = 640               ,
                         C_H_FRONT_PORCH                    = 16                ,
                         C_H_LINE_PERIOD                    = 800               ;
-// ·Ö±æÂÊÎª640*480Ê±³¡Ê±Ðò¸÷¸ö²ÎÊý¶¨Òå               
+// ï¿½Ö±ï¿½ï¿½ï¿½Îª640*480Ê±ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½               
     parameter           C_V_SYNC_PULSE                     = 2                 ,
                         C_V_BACK_PORCH                     = 33                ,
                         C_V_ACTIVE_TIME                    = 480               ,
                         C_V_FRONT_PORCH                    = 10                ,
                         C_V_FRAME_PERIOD                   = 525               ;
-//ÕâÀïÓÃÓÚÊäÈë¸÷¸ö¶¥µãµÄ²ÎÊý
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
 
 always @(posedge clock or negedge rst)
 begin
